@@ -1,0 +1,25 @@
+input[type="checkbox"] {
+  position: relative;
+  appearance: none;
+  padding-left: 20px;
+  display: inline;
+  outline: none;
+}
+input[type="checkbox"]::before {
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 16px;
+  border: 1px solid black;
+  border-radius: 5px;
+  top: 0;
+  left: 0;
+}
+input[type="checkbox"]:checked::after {
+  position: absolute;
+  content: "\2714";
+  font-size: 13px;
+  font-weight: 700;
+  left: 4px;
+  top: 1px;
+}
