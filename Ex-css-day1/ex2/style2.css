@@ -95,22 +95,26 @@ img {
 .row {
   display: flex;
   margin: 0 -15px;
+  flex-flow: row wrap;
+
 }
 .col-2 {
   width: 20%;
 }
 .col-3 {
-  width: 33.3333333%;
+  width: 25%;
 }
 .col-6 {
   width: 50%;
+}
+.col-2, .col-3, .col-6 {
+  padding: 0 15px;
 }
 .section-products {
   padding: 20px 0;
 }
 .product-list .product-item {
   border-radius: 5px;
-  padding: 0 15px;
 }
 .product-list .product-item .product-img {
   border-radius: 5px;
@@ -155,14 +159,12 @@ img {
   color: #fff;
   margin-right: 20px;
 }
-.footer-middle-col {
-  padding: 0 15px;
-}
 .footer-middle-col .footer-title {
   text-transform: uppercase;
 }
 .footer-middle-col .footer-map {
   height: 200px;
+  width: 100%;
 }
 .footer-middle-col .middle-list li {
   padding: 5px 0;
