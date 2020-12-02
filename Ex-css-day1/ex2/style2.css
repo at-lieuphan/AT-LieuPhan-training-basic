@@ -11,7 +11,7 @@ body {
   padding: 0;
 }
 a {
-  color: black;
+  /* color: black; */
   text-decoration: none;
 }
 ul {
@@ -115,6 +115,9 @@ img {
 .product-list .product-item .product-img {
   border-radius: 5px;
 }
+.product-list .product-item .product-actions a {
+  color: black;
+}
 .section-banner {
   position: relative;
   background-color: silver;
@@ -168,6 +171,9 @@ img {
   content: "+";
   margin-right: 5px;
   color: #1a1a1a;
+}
+.footer-middle-col .middle-list li a {
+  color: black;
 }
 .footer-bottom {
   background-color: silver;
