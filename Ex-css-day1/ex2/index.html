@@ -23,13 +23,16 @@
     </div>
     <div class="header-bottom">
       <div class="container flex-between">
-        <ul class="header-nav flex">
-          <li class="menu-item active"><a href="" class="menu-item-link">Home</a></li>
-          <li class="menu-item"><a href="" class="menu-item-link">Products</a></li>
-          <li class="menu-item"><a href="" class="menu-item-link">Category</a></li>
-          <li class="menu-item"><a href="" class="menu-item-link">Blog</a></li>
-          <li class="menu-item"><a href="" class="menu-item-link">Contact us</a></li>
-        </ul>
+        <div class="flex-colunm">
+          <button onClick="clickOpenMenu()" class="btn btn-nav"><i class="fa fa-bars"></i></button>
+          <ul id="js-nav-bar" class="header-nav flex">
+            <li class="menu-item active"><a href="" class="menu-item-link">Home</a></li>
+            <li class="menu-item"><a href="" class="menu-item-link">Products</a></li>
+            <li class="menu-item"><a href="" class="menu-item-link">Category</a></li>
+            <li class="menu-item"><a href="" class="menu-item-link">Blog</a></li>
+            <li class="menu-item"><a href="" class="menu-item-link">Contact us</a></li>
+          </ul>
+        </div>
         <ul class="socials flex">
           <li><a href=""><i class="fa fa-facebook"></i></a></li>
           <li><a href=""><i class="fa fa-google-plus"></i></a></li>
@@ -52,10 +55,7 @@
               <h3 class="product-name">Product 1</h3>
               <strong class="product-price">$150</strong>
             </div>
-            <div class="product-actions flex-between">
-              <a href="" class="btn-primary">Add Cart</a>
-              <a href="" class="btn-secondary">View product</a>
-            </div>
+            <a href="" class="btn-secondary">View product</a>
           </li>
           <li class="product-item col-3">
             <a href="#"><img src="../ex2/assets/image/img-product.png" alt="product1" class="product-img"></a>
@@ -63,10 +63,7 @@
               <h3 class="product-name">Product 1</h3>
               <strong class="product-price">$150</strong>
             </div>
-            <div class="product-actions flex-between">
-              <a href="" class="btn-primary">Add Cart</a>
-              <a href="" class="btn-secondary">View product</a>
-            </div>
+            <a href="" class="btn-secondary">View product</a>
           </li>
           <li class="product-item col-3">
             <a href="#"><img src="../ex2/assets/image/img-product.png" alt="product1" class="product-img"></a>
@@ -74,10 +71,7 @@
               <h3 class="product-name">Product 1</h3>
               <strong class="product-price">$150</strong>
             </div>
-            <div class="product-actions flex-between">
-              <a href="" class="btn-primary">Add Cart</a>
-              <a href="" class="btn-secondary">View product</a>
-            </div>
+            <a href="" class="btn-secondary">View product</a>
           </li>
           <li class="product-item col-3">
             <a href="#"><img src="../ex2/assets/image/img-product.png" alt="product1" class="product-img"></a>
@@ -85,10 +79,7 @@
               <h3 class="product-name">Product 1</h3>
               <strong class="product-price">$150</strong>
             </div>
-            <div class="product-actions flex-between">
-              <a href="" class="btn-primary">Add Cart</a>
-              <a href="" class="btn-secondary">View product</a>
-            </div>
+            <a href="" class="btn-secondary">View product</a>
           </li>
         </ul>
       </div>
@@ -111,10 +102,7 @@
               <h3 class="product-name">Product 1</h3>
               <strong class="product-price">$150</strong>
             </div>
-            <div class="product-actions flex-between">
-              <a href="" class="btn-primary">Add Cart</a>
-              <a href="" class="btn-secondary">View product</a>
-            </div>
+            <a href="" class="btn-secondary">View product</a>
           </li>
           <li class="product-item col-3">
             <a href="#"><img src="../ex2/assets/image/img-product.png" alt="product1" class="product-img"></a>
@@ -122,10 +110,7 @@
               <h3 class="product-name">Product 1</h3>
               <strong class="product-price">$150</strong>
             </div>
-            <div class="product-actions flex-between">
-              <a href="" class="btn-primary">Add Cart</a>
-              <a href="" class="btn-secondary">View product</a>
-            </div>
+            <a href="" class="btn-secondary">View product</a>
           </li>
           <li class="product-item col-3">
             <a href="#"><img src="../ex2/assets/image/img-product.png" alt="product1" class="product-img"></a>
@@ -133,10 +118,7 @@
               <h3 class="product-name">Product 1</h3>
               <strong class="product-price">$150</strong>
             </div>
-            <div class="product-actions flex-between">
-              <a href="" class="btn-primary">Add Cart</a>
-              <a href="" class="btn-secondary">View product</a>
-            </div>
+            <a href="" class="btn-secondary">View product</a>
           </li>
           <li class="product-item col-3">
             <a href="#"><img src="../ex2/assets/image/img-product.png" alt="product1" class="product-img"></a>
@@ -144,10 +126,7 @@
               <h3 class="product-name">Product 1</h3>
               <strong class="product-price">$150</strong>
             </div>
-            <div class="product-actions flex-between">
-              <a href="" class="btn-primary">Add Cart</a>
-              <a href="" class="btn-secondary">View product</a>
-            </div>
+            <a href="" class="btn-secondary">View product</a>
           </li>
         </ul>
       </div>
@@ -234,5 +213,6 @@
       </div>
     </div>
   </footer>
+  <script type="text/javascript" src="index.js"></script>
 </body>
 </html>

@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 body {
   font-family: 'Times New Roman', Times, serif;
@@ -88,6 +90,7 @@ img {
 .sec-title {
   text-transform: uppercase;
   font-size: 20px;
+  padding: 5px 0;
 }
 .sub-title {
   font-size: 15px;
@@ -119,8 +122,14 @@ img {
 .product-list .product-item .product-img {
   border-radius: 5px;
 }
-.product-list .product-item .product-actions a {
+.product-list .product-item .btn-secondary {
   color: black;
+  margin: 0 auto;
+  display: block;
+  padding: 5px;
+  background-color: silver;
+  text-align: center;
+  border-radius: 5px;
 }
 .section-banner {
   position: relative;
@@ -147,6 +156,7 @@ img {
 /* footer */
 .footer-top {
   background-color: black;
+  padding: 15px 0;
 }
 .footer-top .footer-newsletter .title {
   color: #fff;
@@ -161,6 +171,7 @@ img {
 }
 .footer-middle-col .footer-title {
   text-transform: uppercase;
+  margin: 10px 0;
 }
 .footer-middle-col .footer-map {
   height: 200px;
@@ -184,4 +195,56 @@ img {
   text-align: center;
   padding: 15px 0;
   margin: 0;
+}
+.btn-nav {
+  display: none;
+}
+.flex-colunm {
+  flex-direction: column-reverse;
+}
+/* responsize */
+@media only screen and (max-width: 768px) {
+  .btn-nav {
+    display: block;
+    width: 20px;
+    height: 20px;
+  }
+  .header-bottom {
+    position: relative;
+  }
+  .header-nav {
+    position: absolute;
+    flex-direction: column;
+    background-color: silver;
+    top: 40px;
+    left: 15px;
+    display: none;
+  }
+  .product-list .product-item .product-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .sec-title {
+    font-size: 15px;
+  }
+  .sub-title {
+    font-size: 12px;
+  }
+  .section-banner {
+    height: 150px;
+  }
+  .col-3 {
+    width: 50%;
+  }
+  .product-list .product-item {
+    margin-bottom: 20px;
+  }
+  .section-partner {
+    padding-top: 0;
+  }
+  .col-6 {
+    width: 100%;
+  }
 }
