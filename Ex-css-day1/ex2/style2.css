@@ -133,7 +133,7 @@ img {
 }
 .section-banner {
   position: relative;
-  background-color: silver;
+  background: linear-gradient(-45deg, #ee7752, #23a6d5, #23d5ab);
   height: 200px;
 }
 .section-banner .banner-info {
@@ -158,9 +158,25 @@ img {
   background-color: black;
   padding: 15px 0;
 }
+.footer-newsletter {
+  position: relative;
+}
 .footer-top .footer-newsletter .title {
   color: #fff;
   font-size: 17px;
+}
+.footer-top .footer-newsletter input {
+  border: none;
+  height: 30px;
+  border-radius: 5px;
+}
+.footer-top .footer-newsletter button {
+  background-color: inherit;
+  position: absolute;
+  top: 7px;
+  right: 10px;
+  border: none;
+  outline: none;
 }
 .footer-socials {
   align-items: center;
