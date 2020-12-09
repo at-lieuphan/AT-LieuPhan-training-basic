@@ -992,15 +992,6 @@ h6 {
 .is-show {
   display: block; }
 
-.text-center {
-  text-align: center; }
-
-.text-left {
-  text-align: left; }
-
-.text-right {
-  text-align: right; }
-
 .padding-0 {
   padding: 0px;
   padding: 0rem; }
@@ -1902,6 +1893,15 @@ h6 {
 
 .lowercase {
   text-transform: lowercase; }
+
+.text-center {
+  text-align: center; }
+
+.text-left {
+  text-align: left; }
+
+.text-right {
+  text-align: right; }
 
 .bg-primary {
   background-color: #fa9928; }
