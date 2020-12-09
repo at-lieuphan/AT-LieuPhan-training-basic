@@ -989,7 +989,7 @@ h6 {
 .is-hidden {
   display: none; }
 
-.is-active {
+.is-show {
   display: block; }
 
 .text-center {
@@ -1000,18 +1000,6 @@ h6 {
 
 .text-right {
   text-align: right; }
-
-.bg-primary {
-  background-color: #fa9928; }
-
-.bg-white {
-  background-color: #fff; }
-
-.bg-gray {
-  background-color: #e9eaec; }
-
-.bg-green {
-  background-color: #131d33; }
 
 .padding-0 {
   padding: 0px;
@@ -1908,6 +1896,24 @@ h6 {
 .mg-x-15 {
   margin: 0px 60px;
   margin: 0rem 3.75rem; }
+
+.uppercase {
+  text-transform: uppercase; }
+
+.lowercase {
+  text-transform: lowercase; }
+
+.bg-primary {
+  background-color: #fa9928; }
+
+.bg-white {
+  background-color: #fff; }
+
+.bg-gray {
+  background-color: #e9eaec; }
+
+.bg-green {
+  background-color: #131d33; }
 
 .page-main .text-left:after {
   margin: 0; }

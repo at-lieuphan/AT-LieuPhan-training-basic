@@ -1,7 +1,7 @@
 .is-hidden {
   display: none;
 }
-.is-active {
+.is-show {
   display: block;
 }
 .text-center {
@@ -12,16 +12,4 @@
 }
 .text-right {
   text-align: right;
-}
-.bg-primary {
-  background-color: map-get($colors, primary);
-}
-.bg-white {
-  background-color: map-get($colors, white);
-}
-.bg-gray {
-  background-color: map-get($colors, bg-gray);
-}
-.bg-green {
-  background-color: map-get($colors, bg-green);
 }
