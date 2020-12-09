@@ -1,0 +1,79 @@
+.page-header {
+  .header-top {
+    .top-left {
+      @include pxRem(font-size, 16);
+      @include pxRem(padding, 14 0);
+      color: map-get($colors, txt-gray2);
+      font-weight: 300;
+    }
+    .top-right {
+      .icon-item {
+        @include pxRem(padding, 0 12);
+        color: map-get($colors, txt-gray2);
+        &:hover {
+          color: map-get($colors, primary);
+        }
+      }
+    }
+  }
+  .header-middle {
+    .header-wrapper {
+      border: 1px solid map-get($colors, border-gray1);
+    }
+    .img-logo {
+      @include pxRem(padding, 20);
+    }
+  }
+  .header-navbar {
+    .btn-primary {
+      @include pxRem(padding, 10 30);
+      border: none;
+      line-height: 1;
+      &:hover {
+        background-color: map-get($colors, primary);
+      }
+    }
+  }
+  .middle-list {
+    @include pxRem(padding-right, 30);
+    .middle-item {
+      @include pxRem(margin-left, 20);
+      img {
+        @include pxRem(width, 35);
+        @include pxRem(height, 30);
+        @include pxRem(margin-right, 10);
+      }
+    }
+    .middle-content {
+      h5 {
+        @include pxRem(font-size, 16);
+        @include pxRem(margin-bottom, 5);
+        font-weight: 600;
+        color: map-get($colors, txt-black2);
+      }
+      span {
+        @include pxRem(font-size, 16);
+        @include pxRem(margin-bottom, 3);
+        color: map-get($colors, txt-gray3);
+        font-weight: 300;
+      }
+    }
+  }
+  .outer-box {
+    .search-box {
+      @include pxRem(padding-right, 20);
+      display: flex;
+      align-items: center;
+      .btn-search {
+        i {
+          @include pxRem(font-size, 16);
+        }
+      }
+    }
+    .wrapper-button {
+      @include pxRem(padding, 30);
+      border-right: 1px solid map-get($colors, border-gray1);
+      border-left: 1px solid map-get($colors, border-gray1);
+    }
+  }
+}

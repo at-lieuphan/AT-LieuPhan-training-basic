@@ -1,0 +1,35 @@
+.flex {
+  display: flex;
+}
+.flex-1 {
+  flex: 1;
+}
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.is-hidden {
+  display: none;
+}
+.is-active {
+  display: block;
+}
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.bg-primary {
+  background-color: map-get($colors, primary);
+}
+.bg-white {
+  background-color: map-get($colors, white);
+}
+.bg-gray {
+  background-color: map-get($colors, bg-gray);
+}
+.bg-green {
+  background-color: map-get($colors, bg-green);
+}

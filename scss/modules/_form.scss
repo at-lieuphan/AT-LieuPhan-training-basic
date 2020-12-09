@@ -1,0 +1,12 @@
+.form-control {
+  @include pxRem(line-height, 30);
+  @include pxRem(padding, 10 22);
+  @include pxRem(height, 52);
+  @include pxRem(font-size, 16);
+  background-color: map-get($colors, white);
+  outline: none;
+  border: 1px solid map-get($colors, border-gray-light);
+  &:hover, &:focus {
+    border: 1px solid map-get($colors, primary);
+  }
+}

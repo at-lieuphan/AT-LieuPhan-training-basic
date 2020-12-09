@@ -1,0 +1,52 @@
+.section-slideshow {
+  position: relative;
+  z-index: 1;
+  .btn-action {
+    position: absolute;
+    z-index: 100;
+    top: 50%;
+  }
+  .btn-next {
+    left: 0;
+  }
+  .btn-back {
+    right: 0;
+  }
+  .slide-list {
+    z-index: 2;
+    .slide-item {
+      position: relative;
+      z-index: 100;
+      
+      img {
+        @include pxRem(height, 478);
+        width: 100%;
+      }
+      .slide-content {
+        position: absolute;
+        top: 20%;
+        left: 15%;
+      }
+    }
+  }
+}
+.slide-content {
+  .slide-title {
+    @include pxRem(font-size, 48);
+    @include pxRem(padding-bottom, 20);
+    color: map-get($colors, border-gray);
+    font-weight: 700;
+    line-height: 1.2em;
+    width: 40%;
+  }
+  .slide-description {
+    @include pxRem(font-size, 16);
+    @include pxRem(margin-bottom, 40);
+    color: map-get($colors, bg-gray);
+    font-weight: 400;
+  }
+  .btn-second {
+    @include pxRem(margin-left, 15);
+    color: map-get($colors, white);
+  }
+}

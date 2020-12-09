@@ -1,0 +1,54 @@
+.btn {
+  background-color: initial;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  transition: .4s ease-in-out;
+  &:active,
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  &:disabled {
+    pointer-events: none;
+    background-color: transparent;
+  }
+}
+.btn-primary {
+  @include pxRem(font-size, 14);
+  @include pxRem(padding, 11 38);
+  @include pxRem(line-height, 24);
+  font-weight: 400;
+  background-color: map-get($colors, primary);
+  color: map-get($colors, #ffffff);
+  text-transform: uppercase;
+  border: 2px solid map-get($colors, primary);
+  &:hover {
+    background-color: inherit;
+  }
+}
+.btn-action {
+  @include pxRem(padding, 10);
+  @include pxRem(width, 40);
+  @include pxRem(height, 40);
+  @include pxRem(font-size, 15);
+  background-color: map-get($colors, txt-black);
+  color: map-get($colors, white);
+  font-weight: 300;
+}
+.btn-second {
+  @include pxRem(padding, 11 38);
+  @include pxRem(line-height, 24);
+  @include pxRem(font-size, 14);
+  color: map-get($colors, txt-bold);
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: 2px solid map-get($colors, border-gray-light);
+  &:hover {
+    color: map-get($colors, white);
+    background-color: map-get($colors, primary);
+    border: 2px solid map-get($colors, primary);
+  }
+}

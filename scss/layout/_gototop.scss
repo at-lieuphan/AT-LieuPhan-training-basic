@@ -1,0 +1,31 @@
+.btn-gotop {
+  @include pxRem(width, 56);
+  @include pxRem(height, 56);
+  @include pxRem(right, 20);
+  @include pxRem(top, -66);
+  position: fixed;
+  border-radius: 50%;
+  background-color: inherit;
+  border: 2px solid map-get($colors, primary);
+  position: relative;
+  float: right;
+  outline: none;
+  transition: .4s ease-in-out;
+  cursor: pointer;
+  z-index: 99999;
+  &:hover {
+    background-color: map-get($colors, primary);
+    i {
+      color: map-get($colors, white);
+    }
+  }
+  i {
+    @include pxRem(font-size, 18);
+    position: absolute;
+    color: map-get($colors, primary);
+    top: 50%;
+    right: 50%;
+    text-align: center;
+    transform: translate(50%, -50%);
+  }
+}

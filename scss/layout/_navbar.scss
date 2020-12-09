@@ -1,0 +1,41 @@
+.menu-list {
+  .menu-item {
+    @include pxRem(padding, 20 25);
+    border-right: 1px solid map-get($colors, border-gray1);
+    &:first-child {
+      border-left: 1px solid map-get($colors, border-gray1);
+    }
+    &-link {
+      position: relative;
+      @include pxRem(font-size, 14);
+      @include pxRem(line-height, 30);
+      color: map-get($colors, txt-black);
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    &:hover {
+      .menu-item-link {
+        color: map-get($colors, primary);
+      }
+      .menu-item-link::before {
+        @include pxRem(width, 25);
+        @include pxRem(bottom, -5);
+        content: "";
+        position: absolute;
+        left: 20%;
+        border: 1px solid map-get($colors, primary);
+      }
+    }
+    .active {
+      color: map-get($colors, primary);
+      &:before {
+        @include pxRem(width, 25);
+        @include pxRem(bottom, -5);
+        content: "";
+        position: absolute;
+        left: 20%;
+        border: 1px solid map-get($colors, primary);
+      }
+    }
+  }
+}
