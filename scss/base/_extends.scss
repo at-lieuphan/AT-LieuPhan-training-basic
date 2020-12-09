@@ -1,7 +1,83 @@
 %clr {
   &::after {
-    display: block;
+    display: table;
     content: '';
     clear: both;
   }
+}
+%bg-cover {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bg-cover {
+  @extend %bg-cover;
+}
+%flex-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+%flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+%flex-around {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+%flex-column {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+%text-bold {
+  @include pxRem(font-size, 16);
+  font-weight: bold;
+  color: map-get($colors, txt-bold);
+}
+%text-18 {
+  @include pxRem(font-size, 18);
+  font-weight: bold;
+}
+%text-12-bold {
+  @include pxRem(font-size, 12);
+  font-weight: bold;
+  color: map-get($colors, txt-bold);
+}
+.flex-between {
+  @extend %flex-between;
+  &::before,
+  &::after {
+    display: none;
+  }
+}
+.flex-centered {
+  @extend %flex-centered;
+  &::before,
+  &::after {
+    display: none;
+  }
+}
+.flex-around {
+  @extend %flex-around;
+  &::before,
+  &::after {
+    display: none;
+  }
+}
+.flex-column {
+  @extend %flex-column;
+  &::before,
+  &::after {
+    display: none;
+  }
+}
+.flex {
+  display: flex;
+}
+.flex-1 {
+  flex: 1;
 }
