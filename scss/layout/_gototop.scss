@@ -2,12 +2,12 @@
   @include pxRem(width, 56);
   @include pxRem(height, 56);
   @include pxRem(right, 20);
-  @include pxRem(top, -66);
+  @include pxRem(top, 750);
   position: fixed;
   border-radius: 50%;
   background-color: inherit;
   border: 2px solid map-get($colors, primary);
-  position: relative;
+  // position: relative;
   float: right;
   outline: none;
   transition: .4s ease-in-out;

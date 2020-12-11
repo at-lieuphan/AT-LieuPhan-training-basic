@@ -15,32 +15,45 @@
     color: map-get($colors, primary);
   }
   &:hover > ul {
-    @include pxRem(padding, 5);
+    @include pxRem(padding, 10 20);
     border-bottom: 2px solid map-get($colors, primary);
     top: 100%;
+    left: 0%;
     position: absolute;
     display: block;
     background-color: map-get($colors, bg-green);
     z-index: 100;
     li {
-      @include pxRem(padding, 10);
+      @include pxRem(padding, 15);
       @include pxRem(width, 200);
+      align-items: center;
       & > a, & > a:after {
         color: map-get($colors, white);
         font-weight: 400;
       }
     }
     li:hover {
+      position: relative;
       background-color: map-get($colors, primary);
-      & > a:after {
+      &::after {
+        @include pxRem(right, 15);
+        @include pxRem(font-size, 10);
+        position: absolute;
+        content: "\003E";
+        color: map-get($colors, white);
+      }
+      & > a {
         color: map-get($colors, white);
       }
     }
   }
   .drop-sub {
-    z-index: 200;
-    top: 0;
-    left: 100%;
+    a::after {
+      display: none;
+    }
+    ul {
+      top: 0 !important;
+      left: 100% !important;
+    }
   }
-  // Not complete
 }

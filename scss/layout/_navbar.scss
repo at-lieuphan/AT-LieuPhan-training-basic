@@ -39,3 +39,47 @@
     }
   }
 }
+.outer-box {
+  .search-box {
+    @include pxRem(padding-right, 20);
+    display: flex;
+    align-items: center;
+    position: relative;
+    .form-search {
+      @include pxRem(padding, 20);
+      background-color: map-get($colors, white);
+      position: absolute;
+      z-index: 10;
+      top: 100%;
+      right: 0;
+      border: 2px solid map-get($colors, primary);
+      .form-control {
+        @include pxRem(width, 250);
+        @include pxRem(height, 40);
+        @include pxRem(padding, 10 25 10 10);
+      }
+      .btn-search {
+        @include pxRem(right, 30);
+        position: absolute;
+        top: 40%;
+      }
+    }
+    .btn-search {
+      i {
+        @include pxRem(font-size, 16);
+      }
+    }
+  }
+  .wrapper-button {
+    @include pxRem(padding, 30);
+    border-right: 1px solid map-get($colors, border-gray1);
+    border-left: 1px solid map-get($colors, border-gray1);
+  }
+}
+
+.collapse {
+  display: none;
+}
+.collapse.show {
+  display: block;
+}

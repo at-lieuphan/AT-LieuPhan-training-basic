@@ -65,9 +65,9 @@
             <ul class="sub-menu">
               <li><a href="">About Company</a></li>
               <li><a href="">Meet our team</a></li>
-              <li class="dropdown">
+              <li class="dropdown drop-sub">
                 <a href="">Projects</a>
-                <ul class="drop-sub">
+                <ul>
                   <li><a href="">Our Project</a></li>
                   <li><a href="">Projects Single</a></li>
                 </ul>
@@ -106,9 +106,9 @@
         </ul>
         <div class="outer-box flex">
           <div class="search-box">
-            <button class="btn btn-search"><i class="fa fa-search"></i></button>
-            <form class="form-search is-hidden">
-              <input type="text" class="form-control" placeholder="Search...">
+            <button class="btn btn-search dropbtn"><i class="fa fa-search"></i></button>
+            <form class="form-search collapse">
+              <input type="text" class="form-control input-search" placeholder="Search...">
               <button class="btn btn-search"><i class="fa fa-search"></i></button>
             </form>
           </div>
@@ -601,9 +601,9 @@
       </div>
     </section>
     <!-- Go to top -->
-    <!-- <div class="btn-gotop">
+    <div class="btn-gotop" onclick="scrollToTop()">
       <i class="fa fa-arrow-up"></i>
-    </div> -->
+    </div>
   </main>
   <footer class="page-footer bg-green">
     <div class="footer-top">
@@ -693,5 +693,7 @@
     </div>
   </footer>
   <script type="text/javascript" src="./js/slide.js"></script>
+  <script type="text/javascript" src="./js/gotoTop.js"></script>
+  <script type="text/javascript" src="./js/dropdown.js"></script>
 </body>
 </html>

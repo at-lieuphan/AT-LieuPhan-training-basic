@@ -60,21 +60,4 @@
       }
     }
   }
-  .outer-box {
-    .search-box {
-      @include pxRem(padding-right, 20);
-      display: flex;
-      align-items: center;
-      .btn-search {
-        i {
-          @include pxRem(font-size, 16);
-        }
-      }
-    }
-    .wrapper-button {
-      @include pxRem(padding, 30);
-      border-right: 1px solid map-get($colors, border-gray1);
-      border-left: 1px solid map-get($colors, border-gray1);
-    }
-  }
 }

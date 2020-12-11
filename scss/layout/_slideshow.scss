@@ -2,15 +2,21 @@
   position: relative;
   z-index: 1;
   .btn-action {
-    position: absolute;
-    z-index: 100;
-    top: 50%;
+    display: none;
   }
-  .btn-next {
-    left: 0;
-  }
-  .btn-back {
-    right: 0;
+  &:hover {
+    .btn-action {
+      position: absolute;
+      display: block;
+      z-index: 100;
+      top: 50%;
+    }
+    .btn-next {
+      left: 0;
+    }
+    .btn-back {
+      right: 0;
+    }
   }
   .slide-list {
     z-index: 2;

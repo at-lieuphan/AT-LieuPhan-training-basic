@@ -57,6 +57,7 @@
   @include pxRem(font-size, 16);
   color: map-get($colors, white);
   align-items: center;
+  font-weight: bold;
   i {
     @include pxRem(font-size, 16);
     @include pxRem(margin-left, 10);
