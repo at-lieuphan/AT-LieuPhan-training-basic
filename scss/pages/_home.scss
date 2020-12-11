@@ -243,3 +243,178 @@
     @include pxRem(margin-right, 20);
   }
 }
+// section-customer
+.section-feedback {
+  @include pxRem(padding, 75 0);
+  .sec-title {
+    @include pxRem(margin-bottom, 40);
+  }
+}
+.feedbacks {
+  .feedback {
+    &-info {
+      @include pxRem(padding, 25);
+      align-items: flex-start;
+      .avatar {
+        border-radius: 50%;
+      }
+      .info-left {
+        @include pxRem(margin-left, 20);
+        .name {
+          @include pxRem(font-size, 20);
+          @include pxRem(margin-bottom, 10);
+          color: map-get($colors, txt-bold);
+          font-weight: 400;
+        }
+        .location {
+          @include pxRem(font-size, 16);
+          color: map-get($colors, primary);
+        }
+      }
+      .info-right {
+        @include pxRem(font-size, 16);
+        @include pxRem(margin-bottom, 10);
+        font-weight: 200;
+        color: map-get($colors, txt-gray2);
+        i {
+          @include pxRem(font-size, 60);
+          @include pxRem(margin-top, 15);
+          color: map-get($colors, border-gray-light);
+        }
+      }
+    }
+    .lower-box {
+      @include pxRem(padding, 0 20 40 20);
+      position: relative;
+      .feedback-text {
+        @include pxRem(padding-top, 20);
+        @include pxRem(font-size, 16);
+        @include pxRem(line-height, 28);
+        border-top: 1px solid map-get($colors, border-gray-light);
+        color: map-get($colors, txt-gray3);
+        font-weight: 200;
+        &::after {
+          position: absolute;
+          content: '';
+          right: 0;
+          bottom: 0;
+          border-bottom: 35px solid #f7f7f7;
+          border-left: 35px solid transparent;
+        }
+        &::before {
+          position: absolute;
+          content: '';
+          right: 0;
+          bottom: 0;
+          border-top: 35px solid map-get($colors, border-gray);
+          border-right: 35px solid transparent;
+        }
+      }
+    }
+  }
+}
+
+.section-news {
+  @include pxRem(padding, 75 0);
+  .btn-second {
+    border: 2px solid rgba(255,255,255,0.10);
+  }
+  .news {
+    position: relative;
+    &-content {
+      @include pxRem(padding, 20);
+      background-color: map-get($colors, white);
+      .date {
+        @include pxRem(font-size, 16);
+        color: map-get($colors, primary);
+        font-weight: 300;
+        line-height: 1.2;
+      }
+      .title {
+        @include pxRem(font-size, 18);
+        @include pxRem(line-height, 25);
+        @include pxRem(padding-bottom, 20);
+        @include pxRem(margin, 10 0 20);
+        color: map-get($colors, txt-bold);
+        font-weight: 400;
+        border-bottom: 1px solid #f0f0f0;
+      }
+      .list {
+        li {
+          @include pxRem(padding, 7 0);
+          color: map-get($colors, txt-gray3);
+          font-size: 14px;
+          i {
+            @include pxRem(margin-right, 10);
+            color: map-get($colors, primary);
+          }
+        }
+      }
+    }
+    .overlay-box, .bg-box {
+      display: none;
+    }
+    &:hover {
+      .news-content {
+        display: none;
+      }
+      .bg-box, .overlay-box {
+        position: absolute;
+        top: 0;
+        right: 15px;
+        bottom: 0;
+        left: 15px;
+        display: block;
+      }
+      .bg-box {
+        background-image: url('/assets/images/news-9.jpg');
+      }
+      .overlay-box {
+        @include pxRem(padding, 15);
+        background-color: #030733af;
+        .title {
+          @include pxRem(font-size, 18);
+          @include pxRem(margin-bottom, 15);
+          @include pxRem(line-height, 24);
+          font-weight: 400;
+          a {
+            color: map-get($colors, primary);
+          }
+        }
+        .des {
+          @include pxRem(font-size, 16);
+          @include pxRem(margin-bottom, 25);
+          color: map-get($colors, white);
+        }
+      }
+    }
+  }
+}
+// Business
+.section-business {
+  @include pxRem(padding, 70 0 80);
+  .sec-title {
+    @include pxRem(margin-bottom, 20);
+    &::after {
+      display: none;
+    }
+  }
+  .business-list {
+    @include pxRem(margin-top, 30);
+    text-align: center;
+    .business-item {
+      @include pxRem(padding, 15);
+      .business-wrapper {
+        @include pxRem(padding, 15);
+        border: 1px solid map-get($colors, border-gray-light);
+        .business-des {
+          @include pxRem(font-size, 16);
+          @include pxRem(line-height, 28);
+          @include pxRem(margin, 25 0);
+          color: map-get($colors, txt-gray3);
+          font-weight: 200;
+        }
+      }
+    }
+  }
+}

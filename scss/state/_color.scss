@@ -10,3 +10,12 @@
 .bg-green {
   background-color: map-get($colors, bg-green);
 }
+.color-pri {
+  color: map-get($colors, primary);
+}
+.color-white {
+  color: map-get($colors, white);
+}
+.color-black {
+  color: map-get($colors, black);
+}

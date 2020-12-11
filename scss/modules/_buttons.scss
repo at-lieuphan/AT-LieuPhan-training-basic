@@ -15,17 +15,21 @@
     background-color: transparent;
   }
 }
-.btn-primary {
+%btn-pri-auto {
   @include pxRem(font-size, 14);
   @include pxRem(padding, 11 38);
   @include pxRem(line-height, 24);
   font-weight: 400;
+  text-transform: uppercase;
+}
+.btn-primary {
+  @extend %btn-pri-auto;
   background-color: map-get($colors, primary);
   color: map-get($colors, #ffffff);
-  text-transform: uppercase;
   border: 2px solid map-get($colors, primary);
   &:hover {
     background-color: inherit;
+    color: map-get($colors, primary);
   }
 }
 .btn-action {
@@ -38,17 +42,33 @@
   font-weight: 300;
 }
 .btn-second {
-  @include pxRem(padding, 11 38);
-  @include pxRem(line-height, 24);
-  @include pxRem(font-size, 14);
+  @extend %btn-pri-auto;
   color: map-get($colors, txt-bold);
   font-weight: 500;
   letter-spacing: 1px;
-  text-transform: uppercase;
   border: 2px solid map-get($colors, border-gray-light);
   &:hover {
     color: map-get($colors, white);
     background-color: map-get($colors, primary);
     border: 2px solid map-get($colors, primary);
   }
+}
+.btn-readmore {
+  @include pxRem(font-size, 16);
+  color: map-get($colors, white);
+  align-items: center;
+  i {
+    @include pxRem(font-size, 16);
+    @include pxRem(margin-left, 10);
+  }
+  &:hover {
+    color: map-get($colors, primary);
+  }
+}
+.btn-dot {
+  @include pxRem(width, 10);
+  @include pxRem(height, 10);
+  background-color: map-get($colors, white);
+  border-radius: 50%;
+  border: 1px solid map-get($colors, primary);
 }

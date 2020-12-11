@@ -31,6 +31,7 @@
       line-height: 1;
       &:hover {
         background-color: map-get($colors, primary);
+        color: map-get($colors, white);
       }
     }
   }

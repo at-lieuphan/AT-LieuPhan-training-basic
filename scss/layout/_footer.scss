@@ -1,0 +1,131 @@
+.section-widgets {
+  border: 1px solid rgba(255,255,255,0.10);
+  .col-4 {
+    @include pxRem(padding, 75 20 40 30);
+  }
+}
+.widget {
+  border-right: 1px solid rgba(255,255,255,0.10);
+  &-img {
+    @include pxRem(margin-bottom, 20);
+  }
+  &:last-child {
+    border: none;
+  }
+  .des {
+    @include pxRem(font-size, 16);
+    @include pxRem(line-height, 25);
+    @include pxRem(margin-bottom, 25);
+    color: map-get($colors, txt-gray5);
+  }
+  .footer-title {
+    position: relative;
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 400;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+    &:after {
+      @include pxRem(width, 60);
+      @include pxRem(bottom, 5);
+      content: "";
+      position: absolute;
+      display: block;
+      left: 0;
+      border: 1px solid map-get($colors, primary);
+    }
+  }
+  .middle-list {
+    li {
+      @include pxRem(margin, 10 0);
+      a {
+        @include pxRem(font-size, 14);
+        color: map-get($colors, txt-gray5);
+        font-weight: 300;
+        &:before {
+          @include pxRem(padding-right, 10);
+          @include pxRem(font-size, 10);
+          content: '>';
+        }
+      }
+    }
+  }
+}
+.news-list {
+  .news-item {
+    @include pxRem(padding, 15 0 20);
+    &:first-child {
+      border-bottom: 1px solid rgba(255,255,255,0.10);
+    }
+    i {
+      @include pxRem(font-size, 40);
+      @include pxRem(margin-right, 20);
+      color: map-get($colors, primary);
+    }
+    .news-content {
+      @include pxRem(font-size, 16);
+      @include pxRem(padding-bottom, 20);
+      .post-date {
+        @include pxRem(margin-bottom, 15);
+        color: map-get($colors, primary);
+        display: block;
+      }
+      .text {
+        color: map-get($colors, txt-gray5);
+      }
+    }
+  }
+}
+.contacts {
+  @include pxRem(padding, 20 0);
+  border-left: 1px solid rgba(255,255,255,0.10);
+  border-right: 1px solid rgba(255,255,255,0.10);
+  .contact-item {
+    @include pxRem(padding-left, 30);
+    border-right:  1px solid rgba(255,255,255,0.10);
+    &:last-child {
+      border-right: none;
+    }
+    .contact-content {
+      @include pxRem(font-size, 16);
+      .title {
+        @include pxRem(margin-bottom, 5);
+        color: map-get($colors, white);
+        font-weight: 600;
+      }
+      .text {
+        color: map-get($colors, txt-gray5);
+      }
+    }
+  }
+}
+.footer-bottom {
+  @include pxRem(padding, 26);
+  border-top: 1px solid rgba(255,255,255,0.10);
+  .container {
+    padding: 0;
+  }
+  .coppy-right {
+    @include pxRem(font-size, 14);
+    color: map-get($colors, txt-gray5);
+    .high-lights {
+      color: map-get($colors, primary);
+    }
+  }
+  .footer-nav {
+    @include pxRem(font-size, 16);
+    li {
+      @include pxRem(margin-left, 10);
+      &:hover {
+        a {
+          color: map-get($colors, primary);
+        }
+      }
+      a {
+        color: map-get($colors, txt-gray5);
+      }
+    }
+  }
+}
+

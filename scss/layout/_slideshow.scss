@@ -17,9 +17,13 @@
     .slide-item {
       position: relative;
       z-index: 100;
-      
+      &:first-child {
+        .slide-content {
+          top: 15%;
+          left: 50%;
+        }
+      }
       img {
-        @include pxRem(height, 478);
         width: 100%;
       }
       .slide-content {
@@ -34,7 +38,7 @@
   .slide-title {
     @include pxRem(font-size, 48);
     @include pxRem(padding-bottom, 20);
-    color: map-get($colors, border-gray);
+    color: map-get($colors, white);
     font-weight: 700;
     line-height: 1.2em;
     width: 40%;
@@ -42,11 +46,28 @@
   .slide-description {
     @include pxRem(font-size, 16);
     @include pxRem(margin-bottom, 40);
-    color: map-get($colors, bg-gray);
+    color: map-get($colors, white);
     font-weight: 400;
   }
   .btn-second {
     @include pxRem(margin-left, 15);
     color: map-get($colors, white);
   }
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 3s;
+  animation-name: fade;
+  animation-duration: 3s;
+}
+
+@keyframes fade {
+  from {
+   transform: translateX(50%);
+ }
+
+ to {
+   transform: translateX(0%);
+ }
 }

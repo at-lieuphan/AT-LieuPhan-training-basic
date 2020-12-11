@@ -123,8 +123,8 @@
     <!-- Slide show -->
     <section class="section-slideshow">
       <ul class="slide-list">
-        <li class="slide-item">
-          <img src="./assets/images/slide1.jpg" alt="" class="slide-img">
+        <li class="slide-item fade">
+          <img src="./assets/images/image-2.jpg" alt="" class="slide-img">
           <div class="slide-content">
             <h2 class="slide-title">Triph helps you to save time and money.</h2>
             <p class="slide-description">Triph business theme continues to grow every day thanks to the confidence.</p>
@@ -132,8 +132,8 @@
             <a href="" class="btn btn-second">Contact Us</a>
           </div>
         </li>
-        <li class="slide-item">
-          <img src="./assets/images/slide2.jpg" alt="" class="slide-img">
+        <li class="slide-item fade">
+          <img src="./assets/images/image-1.jpg" alt="" class="slide-img">
           <div class="slide-content">
             <h2 class="slide-title">Don't dreamed about success just work for it.</h2>
             <p class="slide-description">Triph business theme continues to grow every day thanks to the confidence.</p>
@@ -141,8 +141,8 @@
             <a href="" class="btn btn-second">Contact Us</a>
           </div>
         </li>
-        <li class="slide-item">
-          <img src="./assets/images/slide3.jpg" alt="" class="slide-img">
+        <li class="slide-item fade">
+          <img src="./assets/images/image-3.jpg" alt="" class="slide-img">
           <div class="slide-content">
             <h2 class="slide-title">Work with world class experts your next project</h2>
             <p class="slide-description">Triph business theme continues to grow every day thanks to the confidence.</p>
@@ -164,7 +164,7 @@
           <li class="service col-4">
             <div class="overlay-box">
               <div class="overlay-inner">
-                <img class="service-img" src="./assets/images/aer.jpg" alt="organization">
+                <img class="service-img" src="./assets/images/services-6.jpg" alt="organization">
                 <div class="bg-icon">
                   <i class="fa fa-thumbs-up"></i>
                 </div>
@@ -181,7 +181,7 @@
           <li class="service col-4">
             <div class="overlay-box">
               <div class="overlay-inner">
-                <img class="service-img" src="./assets/images/aer.jpg" alt="Customer Insights">
+                <img class="service-img" src="./assets/images/services-2.jpg" alt="Customer Insights">
                 <div class="bg-icon">
                   <i class="fa fa-fonticons"></i>
                 </div>
@@ -198,7 +198,7 @@
           <li class="service col-4">
             <div class="overlay-box">
               <div class="overlay-inner">
-                <img class="service-img" src="./assets/images/aer.jpg" alt="Advanced Analytics">
+                <img class="service-img" src="./assets/images/services-7_0.jpg" alt="Advanced Analytics">
                 <div class="bg-icon">
                   <i class="fa fa-search"></i>
                 </div>
@@ -258,8 +258,10 @@
             <h2 class="sec-title text-left">Why Choose Us</h2>
             <p class="sub-title">There is some reason behind why people choose Triph past 20 years for their business solutions.</p>
             <p class="sub-title">Please find our unique qualification and our highlights.</p>
-            <button class="btn btn-action btn-next" onclick="plusDiv(-1)"><i class="fa fa-angle-left"></i></button>
-            <button class="btn btn-action btn-back" onclick="plusDiv(+1)"><i class="fa fa-angle-right"></i></button>
+            <div class="flex">
+              <button class="btn btn-action btn-next mg-r-3" onclick="plusDiv(-1)"><i class="fa fa-angle-left"></i></button>
+              <button class="btn btn-action btn-back" onclick="plusDiv(+1)"><i class="fa fa-angle-right"></i></button>
+            </div>
           </div>
           <ul class="themes row">
             <li class="themes-item col-4">
@@ -383,91 +385,121 @@
       </div>
     </section>
     <!-- Customer feedback -->
-    <!-- <section class="section-customer-feedback">
+    <section class="section-feedback bg-gray">
       <div class="container">
         <h2 class="sec-title">Customer Feedback</h2>
         <ul class="feedbacks row">
-          <li classs="feedback col-6">
-            <div class="feedback-info">
-              <img class="avatar" src="" alt="avatar">
-              <div class="info-left">
-                <h3 class="name">Tyler Hoffman</h3>
-                <span class="location">California</span>
+          <li class="feedback col-6">
+            <div class="pd-3 bg-white">
+              <div class="feedback-info flex-between">
+                <div class="flex">
+                  <img class="avatar" src="./assets/images/author-3.jpg" alt="avatar">
+                  <div class="info-left">
+                    <h3 class="name">Tyler Hoffman</h3>
+                    <span class="location">California</span>
+                  </div>
+                </div>
+                <div class="info-right flex-column text-right">
+                  <span class="time">2 years ago</span>
+                  <i class="fa fa-quote-right"></i>
+                </div>
               </div>
-              <div class="info-right">
-                <span class="time">2 years ago</span>
-                <i class="icon icon-quote"></i>
+              <div class="lower-box">
+                <p class="feedback-text">The great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, because those who do not know how to pursue.</p>
               </div>
             </div>
-            <p class="feedback-text">The great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, because those who do not know how to pursue.</p>
           </li>
-          <li classs="feedback col-6">
-            <div class="feeback-info">
-              <img src="" alt="avatar">
-              <div class="info-left">
-                <h3 class="name">Emilia Crane</h3>
-                <span class="location">California</span>
+          <li class="feedback col-6">
+            <div class="pd-3 bg-white">
+              <div class="feedback-info flex-between">
+                <div class="flex">
+                  <img class="avatar" src="./assets/images/author-7.jpg" alt="avatar">
+                  <div class="info-left">
+                    <h3 class="name">Emilia Crane</h3>
+                    <span class="location">California</span>
+                  </div>
+                </div>
+                <div class="info-right flex-column text-right">
+                  <span class="time">2 years ago</span>
+                  <i class="fa fa-quote-right"></i>
+                </div>
               </div>
-              <div class="info-right">
-                <span class="time">2 years ago</span>
-                <i class="icon icon-quote"></i>
-              </div>
-            </div>
-            <p class="feedback-text">The great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, because those who do not know how to pursue.</p>
-          </li>
-          <li classs="feedback col-6">
-            <div class="feeback-info">
-              <img src="" alt="avatar">
-              <div class="info-left">
-                <h3 class="name">Jenifer Hearly</h3>
-                <span class="location">Newyork</span>
-              </div>
-              <div class="info-right">
-                <span class="time">2 years ago</span>
-                <i class="icon icon-quote"></i>
+              <div class="lower-box">
+                <p class="feedback-text">The great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, because those who do not know how to pursue.</p>
               </div>
             </div>
-            <p class="feedback-text">The great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, because those who do not know how to pursue.</p>
-          </li>
-          <li classs="feedback col-6">
-            <div class="feeback-info">
-              <img src="" alt="avatar">
-              <div class="info-left">
-                <h3 class="name">John Doe</h3>
-                <span class="location">New York</span>
-              </div>
-              <div class="info-right">
-                <span class="time">2 years ago</span>
-                <i class="icon icon-quote"></i>
-              </div>
-            </div>
-            <p class="feedback-text">The great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, because those who do not know how to pursue.</p>
           </li>
         </ul>
-        <button class="btn btn-action btn-next" onclick="plusDivs(-1)"><i class="fa fa-angle-left"></i></button>
-        <button class="btn btn-action btn-back" onclick="plusDivs(+1)"><i class="fa fa-angle-right"></i></button>
+        <ul class="feedbacks row is-hidden">
+          <li class="feedback col-6">
+            <div class="pd-3 bg-white">
+              <div class="feedback-info flex-between text-right">
+                <div class="flex">
+                  <img class="avatar" src="./assets/images/author-3.jpg" alt="avatar">
+                  <div class="info-left">
+                    <h3 class="name">Jenifer Hearly</h3>
+                    <span class="location">Newyork</span>
+                  </div>
+                </div>
+                <div class="info-right flex-column">
+                  <span class="time">2 years ago</span>
+                  <i class="fa fa-quote-right"></i>
+                </div>
+              </div>
+              <div class="lower-box">
+                <p class="feedback-text">The great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, because those who do not know how to pursue.</p>
+              </div>
+            </div>
+          </li>
+          <li class="feedback col-6">
+            <div class="pd-3 bg-white">
+              <div class="feedback-info flex-between text-right">
+                <div class="flex">
+                  <img class="avatar" src="./assets/images/author-7.jpg" alt="avatar">
+                  <div class="info-left">
+                    <h3 class="name">Emilia Crane</h3>
+                    <span class="location">California</span>
+                  </div>
+                </div>
+                <div class="info-right flex-column">
+                  <span class="time">2 years ago</span>
+                  <i class="fa fa-quote-right"></i>
+                </div>
+              </div>
+              <div class="lower-box">
+                <p class="feedback-text">The great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, because those who do not know how to pursue.</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="text-center mg-t-5">
+          <button class="btn btn-dot bg-primary mg-r-2"></button>
+          <button class="btn btn-dot"></button>
+        </div>
       </div>
-    </section> -->
+    </section>
     <!-- News -->
-    <!-- <section class="section-news">
+    <section class="section-news bg-green">
       <div class="container">
-        <div class="sec-title">
-          <h2 class="title-name">Latest News</h2>
-          <a href="" class="btn btn-second">More News</a>
+        <div class="flex-between mg-b-6">
+          <h2 class="sec-title color-white">Latest News</h2>
+          <a href="" class="btn btn-second color-white">More News</a>
+        </div>
           <ul class="latest-news row">
             <li class="news col-3">
               <div class="news-content">
                 <time class="date">27th August, 2018</time>
                 <h3 class="title">Tips For Sucess In 2016: Ways To Grow</h3>
                 <ul class="list">
-                  <li class="item"><i class="icon icon-user"></i>By Admin</li>
-                  <li class="item"><i class="icon icon-msg"></i>3 Comments</li>
+                  <li class="item"><i class="fa fa-user"></i>By Admin</li>
+                  <li class="item"><i class="fa fa-comments"></i>3 Comments</li>
                 </ul>
               </div>
+              <div class="bg-box"></div>
               <div class="overlay-box">
                 <h3 class="title"><a href="" class="link">Tips For Sucess In 2016: Ways To Grow </a></h3>
                 <p class="des">Who loves or pursues or desires to obtain pain of itself,…</p>
-                <a href="" class="btn btn-readmore">Read More</a>
+                <a href="" class="btn btn-readmore">Read More <i class="fa fa-angle-right"></i></a>
               </div>
             </li>
             <li class="news col-3">
@@ -475,14 +507,15 @@
                 <time class="date">27th August, 2018</time>
                 <h3 class="title">6 Ways To Keep In Control Your Debtors</h3>
                 <ul class="list">
-                  <li class="item"><i class="icon icon-user"></i>By Admin</li>
-                  <li class="item"><i class="icon icon-msg"></i>3 Comments</li>
+                  <li class="item"><i class="fa fa-user"></i>By Admin</li>
+                  <li class="item"><i class="fa fa-comments"></i>3 Comments</li>
                 </ul>
               </div>
+              <div class="bg-box"></div>
               <div class="overlay-box">
                 <h3 class="title"><a href="" class="link"> 6 Ways To Keep In Control Your Debtors </a></h3>
                 <p class="des">Know how to pursue pleasure rationally encounter…</p>
-                <a href="" class="btn btn-readmore">Read More</a>
+                <a href="" class="btn btn-readmore">Read More <i class="fa fa-angle-right"></i></a>
               </div>
             </li>
             <li class="news col-3">
@@ -490,59 +523,68 @@
                 <time class="date">27th August, 2018</time>
                 <h3 class="title">What A Finance Director Could Add Business </h3>
                 <ul class="list">
-                  <li class="item"><i class="icon icon-user"></i>By Admin</li>
-                  <li class="item"><i class="icon icon-msg"></i>3 Comments</li>
+                  <li class="item"><i class="fa fa-user"></i>By Admin</li>
+                  <li class="item"><i class="fa fa-comments"></i>3 Comments</li>
                 </ul>
               </div>
+              <div class="bg-box"></div>
               <div class="overlay-box">
                 <h3 class="title"><a href="" class="link">What A Finance Director Could Add Business </a></h3>
                 <p class="des">The great explorer of the truth, the master-builder of…</p>
-                <a href="" class="btn btn-readmore">Read More</a>
+                <a href="" class="btn btn-readmore">Read More <i class="fa fa-angle-right"></i></a>
               </div>
             </li>
             <li class="news col-3">
-              <div class="content">
+              <div class="news-content">
                 <time class="date">27th August, 2018</time>
                 <h3 class="title">Essential advice on choosing a top class</h3>
-                <hr>
                 <ul class="list">
-                  <li class="item"><i class="icon icon-user"></i>By Admin</li>
-                  <li class="item"><i class="icon icon-msg"></i>3 Comments</li>
+                  <li class="item"><i class="fa fa-user"></i>By Admin</li>
+                  <li class="item"><i class="fa fa-comments"></i>3 Comments</li>
                 </ul>
               </div>
+              <div class="bg-box"></div>
               <div class="overlay-box">
                 <h3 class="title"><a href="" class="link">Essential advice on choosing a top class </a></h3>
                 <p class="des">Who loves or pursues or desires to obtain pain of itself,…</p>
-                <a href="" class="btn btn-readmore">Read More</a>
+                <a href="" class="btn btn-readmore">Read More <i class="fa fa-angle-right"></i></a>
               </div>
             </li>
           </ul>
         </div>
       </div>
-    </section> -->
+    </section> 
     <!-- Business -->
-    <!-- <section class="section-business">
+    <section class="section-business">
       <div class="container">
-        <h2 class="sec-title">Trusted us by over <span class="number">10,000</span> local businesses</h2>
-        <p class="sub-title">How all this mistaken idea of denouncing pleasure and praising pain was born and I will</p>
-        <p class="sub-title">>you a complete account of the system expound.</p>
+        <h2 class="sec-title">Trusted us by over <span class="color-pri">10,000</span> local businesses</h2>
+        <p class="sub-title text-center">How all this mistaken idea of denouncing pleasure and praising pain was born and I will</p>
+        <p class="sub-title text-center m-0">you a complete account of the system expound.</p>
         <ul class="business-list row">
           <li class="business-item col-4">
-            <img class="business-img" src="" alt="business1">
-            <p class="business-des">There anyone who loves or pursues or desires sed to obtain pain of itself, because it is pain, but because occasionally sed great.</p>
+            <div class="business-wrapper">
+              <img class="business-img" src="./assets/images/business-1.png" alt="business1">
+              <p class="business-des">There anyone who loves or pursues or desires sed to obtain pain of itself, because it is pain, but because occasionally sed great.</p>
+            </div>
           </li>
           <li class="business-item col-4">
-            <img class="business-img" src="" alt="business2">
-            <p class="business-des">Except to obtain some advantage from it but who has any right to find fault with a man who to enjoy a pleasure that annoying.</p>
+            <div class="business-wrapper">
+              <img class="business-img" src="./assets/images/business-2.png" alt="business2">
+              <p class="business-des">Except to obtain some advantage from it but who has any right to find fault with a man who to enjoy a pleasure that annoying.</p>
+            </div>
           </li>
           <li class="business-item col-4">
-            <img class="business-img" src="" alt="business3">
-            <p class="business-des">Who loves or pursues or desires to obtain pain itself, because is pain, but because occasionally ut circumstances occur which toil.</p>
+            <div class="business-wrapper">
+              <img class="business-img" src="./assets/images/business-3.png" alt="business3">
+              <p class="business-des">Who loves or pursues or desires to obtain pain itself, because is pain, but because occasionally ut circumstances occur which toil.</p>
+            </div>
           </li>
         </ul>
-        <a href="" class="btn btn-primary">Join With Us</a>
+        <div class="is-show text-center mg-t-6">
+          <a href="" class="btn btn-primary">Join With Us</a>
+        </div>
       </div>
-    </section> -->
+    </section>
     <!-- Subscribe -->
     <section class="section-subscribe bg-gray">
       <div class="container">
@@ -563,42 +605,42 @@
       <i class="fa fa-arrow-up"></i>
     </div> -->
   </main>
-  <!-- <footer class="page-footer bg-green">
+  <footer class="page-footer bg-green">
     <div class="footer-top">
       <div class="container">
         <div class="section-widgets row">
           <div class="widget logo-widget col-4">
-            <img class="widget-img" src="./assets/images/logo.png" alt="logo1">
+            <img class="widget-img" src="./assets/images/footer-logo.png" alt="logo1">
             <p class="des">Over 24 years experience and knowledge international standards, technologicaly changes and industrial systems, we are dedicated to provides seds the best and economical solutions to our valued customers.</p>
             <a href="" class="btn btn-primary">Read More</a>
           </div>
           <div class="widget widget-middle col-4">
             <h3 class="footer-title">Usefull Links</h3>
-            <ul class="middle-list">
-              <li class="middle"><a href="">Business Growth</a></li>
-              <li class="middle"><a href="">About Triph</a></li>
-              <li class="middle"><a href="">Sustainability</a></li>
-              <li class="middle"><a href="">Customer FAQ’s</a></li>
-              <li class="middle"><a href="">Performance</a></li>
-              <li class="middle"><a href="">Testimonials</a></li>
-              <li class="middle"><a href="">Customer Insights</a></li>
-              <li class="middle"><a href="">Free Consultation</a></li>
-              <li class="middle"><a href="">Organization</a></li>
-              <li class="middle"><a href="">Meet Our Team</a></li>
+            <ul class="middle-list row">
+              <li class="middle col-6"><a href="">Business Growth</a></li>
+              <li class="middle col-6"><a href="">About Triph</a></li>
+              <li class="middle col-6"><a href="">Sustainability</a></li>
+              <li class="middle col-6"><a href="">Customer FAQ’s</a></li>
+              <li class="middle col-6"><a href="">Performance</a></li>
+              <li class="middle col-6"><a href="">Testimonials</a></li>
+              <li class="middle col-6"><a href="">Customer Insights</a></li>
+              <li class="middle col-6"><a href="">Free Consultation</a></li>
+              <li class="middle col-6"><a href="">Organization</a></li>
+              <li class="middle col-6"><a href="">Meet Our Team</a></li>
             </ul>
           </div>
           <div class="widget col-4">
             <h3 class="footer-title">Latest News</h3>
             <ul class="news-list">
-              <li class="news-item">
-                <i class="icon icon-img"></i>
+              <li class="news-item flex">
+                <i class="fa fa-image"></i>
                 <div class="news-content">
                   <time class="post-date">August 27th, 2018</time>
                   <span class="text">Tips For Sucess In 2016: Ways To Grow</span>
                 </div>
               </li>
-              <li class="news-item">
-                <i class="icon icon-img"></i>
+              <li class="news-item flex">
+                <i class="fa fa-image"></i>
                 <div class="news-content">
                   <time class="post-date">August 27th, 2018</time>
                   <span class="text">T6 Ways To Keep In Control Your Debtors</span>
@@ -612,22 +654,22 @@
     <div class="footer-contacts">
       <div class="container">
         <ul class="contacts row">
-          <li class="contact-item col-4">
-            <i class="icon icon-address"></i>
+          <li class="contact-item col-4 flex">
+            <img src="./assets/images/address.png" alt="" class="mg-r-3">
             <div class="contact-content">
               <h4 class="title">Address</h4>
               <span class="text">185, Triph Street, Los Angeles, USA.</span>
             </div>
           </li>
-          <li class="contact-item col-4">
-            <i class="icon icon-phone"></i>
+          <li class="contact-item col-4 flex">
+            <img src="./assets/images/phone.png" alt="" class="mg-r-3">
             <div class="contact-content">
               <h4 class="title">Call Us On</h4>
               <span class="text">Front Desk: +123-456-7890 & 23</span>
             </div>
           </li>
-          <li class="contact-item col-4">
-            <i class="icon icon-email"></i>
+          <li class="contact-item col-4 flex">
+            <img src="./assets/images/email.png" alt="" class="mg-r-3">
             <div class="contact-content">
               <h4 class="title">Email At</h4>
               <span class="text">Supportteam@yourdomain.com</span>
@@ -638,20 +680,18 @@
     </div>
     <div class="footer-bottom">
       <div class="container">
-        <div class="swapper">
+        <div class="flex-between">
           <p class="coppy-right">Copyrights © 2017 All Rights Reserved. Powered by <a href="" class="high-lights">Company</a></p>
-          <nav class="foote-nav">
-            <ul class="menu-list">
-              <li class="menu-item"><a href="">Legal</a></li>
-              <li class="menu-item"><a href="">Privacy Policy</a></li>
-              <li class="menu-item"><a href="">Sitemap</a></li>
-              <li class="menu-item"><a href="">Contact</a></li>
-            </ul>
-          </nav>
+          <ul class="footer-nav flex">
+            <li><a href="">Legal</a></li>
+            <li><a href="">Privacy Policy</a></li>
+            <li><a href="">Sitemap</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
         </div>
       </div>
     </div>
-  </footer> -->
+  </footer>
   <script type="text/javascript" src="./js/slide.js"></script>
 </body>
 </html>
