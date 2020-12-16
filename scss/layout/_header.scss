@@ -18,6 +18,7 @@
   }
   .header-middle {
     .header-wrapper {
+      @include pxRem(padding-right, 30);
       border: 1px solid map-get($colors, border-gray1);
     }
     .img-logo {
@@ -36,7 +37,6 @@
     }
   }
   .middle-list {
-    @include pxRem(padding-right, 30);
     .middle-item {
       @include pxRem(margin-left, 20);
       img {
@@ -57,6 +57,31 @@
         @include pxRem(margin-bottom, 3);
         color: map-get($colors, txt-gray3);
         font-weight: 300;
+      }
+    }
+  }
+}
+
+@include respond-below(large) {
+  .page-header {
+    .header-middle {
+      padding: 0;
+      .header-wrapper {
+        flex-direction: column;
+      }
+    }
+    .middle-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      .middle-item {
+        @include pxRem(margin, 0 0 20);
+        justify-content: center;
+        width: 50%;
+        &:first-child {
+          border-right: 1px solid map-get($colors, border-gray-light);
+        }
       }
     }
   }

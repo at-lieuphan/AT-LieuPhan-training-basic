@@ -1,6 +1,8 @@
 .dropdown {
   position: relative;
-  & > ul {
+  transition: height 3s;
+  z-index: 1000;
+  .dropdown-content {
     display: none;
   } 
   & > a:after {
@@ -14,46 +16,63 @@
   &:hover > a:after {
     color: map-get($colors, primary);
   }
-  &:hover > ul {
-    @include pxRem(padding, 10 20);
-    border-bottom: 2px solid map-get($colors, primary);
-    top: 100%;
-    left: 0%;
-    position: absolute;
-    display: block;
-    background-color: map-get($colors, bg-green);
-    z-index: 100;
-    li {
-      @include pxRem(padding, 15);
-      @include pxRem(width, 200);
-      align-items: center;
-      & > a, & > a:after {
-        color: map-get($colors, white);
-        font-weight: 400;
+  &:hover {
+    .dropdown-content {
+      @include pxRem(padding, 10 0);
+      border-bottom: 2px solid map-get($colors, primary);
+      top: 103%;
+      left: 0%;
+      position: absolute;
+      display: block;
+      background-color: map-get($colors, bg-green);
+      li {
+        @include pxRem(padding, 0 20);
+        @include pxRem(width, 230);
+        align-items: center;
+        & > a {
+          @include pxRem(padding, 15);
+          display: block;
+        }
+        & > a, & > a:after {
+          color: map-get($colors, white);
+          font-weight: 400;
+        }
       }
-    }
-    li:hover {
-      position: relative;
-      background-color: map-get($colors, primary);
-      &::after {
-        @include pxRem(right, 15);
-        @include pxRem(font-size, 10);
-        position: absolute;
-        content: "\003E";
-        color: map-get($colors, white);
-      }
-      & > a {
-        color: map-get($colors, white);
+      li:hover {
+        position: relative;
+        background-color: map-get($colors, bg-green);
+        &::after {
+          @include pxRem(right, 30);
+          @include pxRem(font-size, 10);
+          position: absolute;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          content: "\003E";
+          color: map-get($colors, white);
+        }
+        & > a {
+          background-color: map-get($colors, primary);
+          color: map-get($colors, white);     
+        }
       }
     }
   }
   .drop-sub {
-    a::after {
-      display: none;
-    }
-    ul {
+    position: relative;
+    transition: width 4s;
+    .dropdown-content {
+      position: absolute;
       top: 0 !important;
       left: 100% !important;
+      display: none;
+    }
+    &:hover {
+      .dropdown-content {
+        display: block;
+      }
+    }
+    a::after {
+      display: none;
     }
   }
 }

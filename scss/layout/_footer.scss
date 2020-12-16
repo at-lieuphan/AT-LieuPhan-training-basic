@@ -5,6 +5,7 @@
   }
 }
 .widget {
+  @include pxRem(padding, 70 0 40);
   border-right: 1px solid rgba(255,255,255,0.10);
   &-img {
     @include pxRem(margin-bottom, 20);
@@ -37,16 +38,24 @@
     }
   }
   .middle-list {
-    li {
+    margin: 0;
+    .middle {
       @include pxRem(margin, 10 0);
+      color: map-get($colors, txt-gray5);
+      position: relative;
+      &:before {
+        @include pxRem(padding-right, 10);
+        @include pxRem(font-size, 10);
+        content: '\003E';
+        position: absolute;
+        left: 0;
+      }
       a {
         @include pxRem(font-size, 14);
         color: map-get($colors, txt-gray5);
         font-weight: 300;
-        &:before {
-          @include pxRem(padding-right, 10);
-          @include pxRem(font-size, 10);
-          content: '>';
+        &:hover {
+          color: map-get($colors, primary);
         }
       }
     }
@@ -125,6 +134,20 @@
       a {
         color: map-get($colors, txt-gray5);
       }
+    }
+  }
+}
+
+@include respond-below(large) {
+  .contacts {
+    .contact-item {
+      @include pxRem(margin-bottom, 30);
+    }
+  }
+  .wrapper-foo-bottom {
+    flex-direction: column;
+    .coppy-right {
+      @include pxRem(margin-bottom, 15);
     }
   }
 }

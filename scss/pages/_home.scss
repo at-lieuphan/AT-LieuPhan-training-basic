@@ -359,11 +359,11 @@
         display: none;
       }
       .bg-box, .overlay-box {
+        @include pxRem(right, 15);
+        @include pxRem(left, 15);
         position: absolute;
         top: 0;
-        right: 15px;
         bottom: 0;
-        left: 15px;
         display: block;
       }
       .bg-box {
@@ -415,6 +415,84 @@
           font-weight: 200;
         }
       }
+    }
+  }
+}
+
+
+// responsize
+@include respond-below(large) {
+  .section-services {
+    .services {
+      .service {
+        @include pxRem(margin-bottom, 30);
+
+      }
+    }
+  }
+  .service-counters {
+    margin: 0;
+  }
+  // .section-choose
+  .section-choose {
+    .wrapper-choose {
+      flex-direction: column;
+    }
+    .title-choose {
+      flex-direction: column;
+    }
+  }
+  .themes {
+    @include pxRem(padding-top, 20);
+    margin: 0;
+    &-item {
+      display: none;
+      &:first-child {
+        padding: 0;
+        display: block;
+      }
+    }
+  }
+  // Section-about
+  .about-img:first-child {
+    @include pxRem(margin-bottom, 40);
+  }
+  // Call action 
+  .call-action {
+    text-align: center;
+    .text-content {
+      display: inline;
+    }
+  }
+  // Customer feedback
+  .section-feedback {
+
+  }
+  // Section news
+  .section-news {
+    .news {
+      @include pxRem(margin-bottom, 30);
+      &-content {
+        .title {
+          @include pxRem(font-size, 22);
+          @include pxRem(line-height, 30);
+        }
+      }
+    }
+  }
+  // Section-business 
+  .section-business {
+    text-align: center;
+  }
+  // Section-subscribe
+  .section-subscribe {
+    @include pxRem(padding, 45 0);
+    .wrapper-subscribe {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .form-subcribe {
+      @include pxRem(margin-top, 30);
     }
   }
 }

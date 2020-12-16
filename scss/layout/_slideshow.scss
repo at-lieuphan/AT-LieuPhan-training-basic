@@ -3,19 +3,17 @@
   z-index: 1;
   .btn-action {
     display: none;
+    position: absolute;
+    z-index: 100;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .btn-back {
+    right: 0;
   }
   &:hover {
     .btn-action {
-      position: absolute;
       display: block;
-      z-index: 100;
-      top: 50%;
-    }
-    .btn-next {
-      left: 0;
-    }
-    .btn-back {
-      right: 0;
     }
   }
   .slide-list {
@@ -30,12 +28,14 @@
         }
       }
       img {
+        @include pxRem(height, 402);
         width: 100%;
       }
       .slide-content {
         position: absolute;
-        top: 20%;
-        left: 15%;
+        width: 46%;
+        top: 10%;
+        left: 10%;
       }
     }
   }
@@ -47,7 +47,6 @@
     color: map-get($colors, white);
     font-weight: 700;
     line-height: 1.2em;
-    width: 40%;
   }
   .slide-description {
     @include pxRem(font-size, 16);
@@ -76,4 +75,29 @@
  to {
    transform: translateX(0%);
  }
+}
+
+@include respond-below(large) {
+  .section-slideshow {
+    .btn-action {
+      display: block;
+    }
+  }
+  .slide-content {
+    .slide-title {
+      @include pxRem(font-size, 30);
+      @include pxRem(padding-bottom, 10);
+    }
+    .slide-description {
+      @include pxRem(font-size, 16);
+      @include pxRem(margin-bottom, 15);
+    }
+    .btn-primary, .btn-second {
+      @include pxRem(padding, 8 11);
+      @include pxRem(font-size, 10);
+    }
+  }
+  .wrapper-sub-title {
+    text-align: center;
+  }
 }
