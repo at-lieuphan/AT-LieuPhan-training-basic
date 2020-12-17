@@ -8,9 +8,12 @@
   @include pxRem(padding, 75 0 130);
   .services {
     @include pxRem(margin-top, 20);
+    .service {
+      // transition: all 3s ease;
+      transition-delay: 2s;
+    }
     .overlay-box {
       position: relative;
-      transition: all 700ms ease;
       .overlay-inner {
         position: relative;
         overflow: hidden;
@@ -37,6 +40,20 @@
         width: 100%;
       }
     }
+    .wrapper-txt {
+      @include pxRem(padding, 0 20);
+      @include pxRem(font-size, 16);
+      position: absolute;
+      background: rgba(19,29,51,0.90);
+      z-index: 1500;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      text-align: center;
+      width: 100%;
+      opacity: 0;
+      transition: all .7s ease;
+    }
     .service:hover {
       .overlay-inner {
         .bg-icon {
@@ -44,17 +61,7 @@
         }
       }
       .wrapper-txt {
-        @include pxRem(padding, 0 20);
-        @include pxRem(font-size, 16);
-        position: absolute;
-        display: block;
-        background: rgba(19,29,51,0.90);
-        z-index: 1500;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        text-align: center;
-        width: 100%;
+        opacity: 1;
         .text {
           color: map-get($colors, white);
           position: absolute;
@@ -421,12 +428,21 @@
 
 
 // responsize
+@include respond-below(largest) {
+  .section-subscribe {
+    @include pxRem(padding, 45 0);
+    .form-subcribe {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+}
+
 @include respond-below(large) {
   .section-services {
     .services {
       .service {
         @include pxRem(margin-bottom, 30);
-
       }
     }
   }
@@ -486,13 +502,34 @@
   }
   // Section-subscribe
   .section-subscribe {
-    @include pxRem(padding, 45 0);
     .wrapper-subscribe {
       flex-direction: column;
       align-items: flex-start;
     }
     .form-subcribe {
       @include pxRem(margin-top, 30);
+    }
+  }
+}
+
+@include respond-below(medium) {
+  .themes-item:first-child {
+    width: 100%;
+  }
+  .section-business {
+    .sec-title {
+      @include pxRem(font-size, 24);
+    }
+    .sub-title {
+      @include pxRem(font-size, 14);
+    }
+  }
+  .section-subscribe {
+    .form-subcribe {
+      justify-content: space-between;
+      .form-control {
+        @include pxRem(width, 315);
+      }
     }
   }
 }

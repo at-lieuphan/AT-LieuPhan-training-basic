@@ -152,3 +152,28 @@
   }
 }
 
+@include respond-below(medium) {
+  .section-widgets {
+    border-bottom: none;
+  }
+  .contacts {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 0;
+    .contact-item {
+      flex-direction: column;
+      border-right: none;
+      img {
+        @include pxRem(width, 50);
+        margin: 0 auto;
+      }
+      .contact-content {
+        text-align: center;
+      }
+    }
+  }
+  .widget {
+    &:nth-child(2), &:nth-child(3) {
+      @include pxRem(padding, 20);
+    }
+  }
+}

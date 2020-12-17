@@ -82,6 +82,9 @@
 .collapse.show {
   display: block;
 }
+.nav-sp {
+  display: none;
+}
 @include respond-below(large) {
   .menu-list {
     width: 100%;
@@ -89,5 +92,30 @@
   }
   .outer-box {
     display: none;
+  }
+}
+
+@include respond-below(medium) {
+  .nav-pc {
+    .menu-list, .outer-box {
+      display: none;
+    }
+  }
+  .nav-sp {
+    @include pxRem(padding, 20 15);
+    display: flex;
+    width: 100%;
+  }
+  .page-header .header-navbar {
+    display: flex;
+    flex-direction: column-reverse;
+    .nav-pc {
+      justify-content: flex-start;
+      width: 100%;
+    }
+    .btn-nav {
+      @include pxRem(font-size, 22);
+      @include pxRem(padding, 10 10);
+    }
   }
 }

@@ -2,9 +2,6 @@
   position: relative;
   transition: height 3s;
   z-index: 1000;
-  .dropdown-content {
-    display: none;
-  } 
   & > a:after {
     @include pxRem(font-size, 14);
     @include pxRem(margin-left, 8);
@@ -16,15 +13,18 @@
   &:hover > a:after {
     color: map-get($colors, primary);
   }
+  .dropdown-content {
+    @include pxRem(padding, 10 0);
+    border-bottom: 2px solid map-get($colors, primary);
+    top: 103%;
+    left: 0%;
+    position: absolute;
+    background-color: map-get($colors, bg-green);
+    opacity: 0;
+  }
   &:hover {
     .dropdown-content {
-      @include pxRem(padding, 10 0);
-      border-bottom: 2px solid map-get($colors, primary);
-      top: 103%;
-      left: 0%;
-      position: absolute;
-      display: block;
-      background-color: map-get($colors, bg-green);
+      opacity: 1;
       li {
         @include pxRem(padding, 0 20);
         @include pxRem(width, 230);
@@ -61,14 +61,17 @@
     position: relative;
     transition: width 4s;
     .dropdown-content {
+      @include pxRem(width, 170);
       position: absolute;
-      top: 0 !important;
-      left: 100% !important;
-      display: none;
+      top: 0;
+      left: 100%;
+      opacity: 0;
+      transition: width 1s;
     }
     &:hover {
       .dropdown-content {
-        display: block;
+        width: 100%;
+        opacity: 1;
       }
     }
     a::after {

@@ -12,6 +12,7 @@
   outline: none;
   transition: .4s ease-in-out;
   cursor: pointer;
+  z-index: 99999;
   &:hover {
     background-color: map-get($colors, primary);
     i {
