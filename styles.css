@@ -617,6 +617,22 @@ h6 {
     .dropdown .drop-sub a::after {
       display: none; }
 
+@media (max-width: 767px) {
+  .dropdown > a {
+    display: block; }
+    .dropdown > a::after {
+      right: 15px;
+      right: 0.9375rem;
+      padding: 2px 15px;
+      padding: 0.125rem 0.9375rem;
+      position: absolute;
+      color: #fff;
+      top: 50%;
+      transform: translateY(-50%);
+      border: 1px solid #fff; }
+  .dropdown .dropdown-content {
+    display: none; } }
+
 .sec-title {
   font-size: 32px;
   font-size: 2rem;
@@ -709,7 +725,7 @@ h6 {
 
 /* Grid for screen min-width: $small
  * Ex: col-small-1, col-small-2 */
-@media (min-width: 480px) {
+@media (min-width: 320px) {
   .col-small-1 {
     width: 8.33333%; }
   .col-small-2 {
@@ -1050,6 +1066,8 @@ h6 {
         color: #9c9c9c; }
 
 @media (max-width: 1023px) {
+  .widget {
+    border-right: none; }
   .contacts .contact-item {
     margin-bottom: 30px;
     margin-bottom: 1.875rem; }
@@ -1076,7 +1094,9 @@ h6 {
         text-align: center; }
   .widget:nth-child(2), .widget:nth-child(3) {
     padding: 20px;
-    padding: 1.25rem; } }
+    padding: 1.25rem; }
+  .coppy-right {
+    text-align: center; } }
 
 .menu-list .menu-item {
   padding: 20px 25px;
@@ -1187,7 +1207,21 @@ h6 {
       font-size: 22px;
       font-size: 1.375rem;
       padding: 10px 10px;
-      padding: 0.625rem 0.625rem; } }
+      padding: 0.625rem 0.625rem; }
+    .page-header .header-navbar .menu-list {
+      margin-bottom: 10px;
+      margin-bottom: 0.625rem;
+      border-right: none; }
+      .page-header .header-navbar .menu-list .menu-item {
+        padding: 10px 5px;
+        padding: 0.625rem 0.3125rem;
+        background-color: #fa9928;
+        border-bottom: 1px solid #fff;
+        border-right: none; }
+        .page-header .header-navbar .menu-list .menu-item-link {
+          color: #fff; }
+        .page-header .header-navbar .menu-list .menu-item:first-child {
+          border-left: none; } }
 
 .section-slideshow {
   position: relative;
@@ -1244,15 +1278,21 @@ h6 {
 
 .fade {
   -webkit-animation-name: fade;
-  -webkit-animation-duration: 3s;
+  -webkit-animation-duration: 1.5s;
   animation-name: fade;
-  animation-duration: 3s; }
+  animation-duration: 1.5s; }
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4; }
+  to {
+    opacity: 1; } }
 
 @keyframes fade {
   from {
-    transform: translateX(50%); }
+    opacity: .4; }
   to {
-    transform: translateX(0%); } }
+    opacity: 1; } }
 
 @media (max-width: 1023px) {
   .section-slideshow .slide-list .slide-item .slide-img {
@@ -1282,6 +1322,12 @@ h6 {
   .section-slideshow .slide-list .slide-item .slide-img {
     height: 246px;
     height: 15.375rem; }
+  .section-slideshow .slide-list .slide-item .slide-content .slide-title {
+    font-size: 20px;
+    font-size: 1.25rem; }
+  .section-slideshow .slide-list .slide-item .slide-content .slide-description {
+    font-size: 18px;
+    font-size: 1.125rem; }
   .section-slideshow .slide-list .slide-item .slide-content .btn-primary, .section-slideshow .slide-list .slide-item .slide-content .btn-second {
     display: none; } }
 
@@ -2553,7 +2599,8 @@ h6 {
     border-radius: 50%; }
   .feedbacks .feedback-info .info-left {
     margin-left: 20px;
-    margin-left: 1.25rem; }
+    margin-left: 1.25rem;
+    text-align: start; }
     .feedbacks .feedback-info .info-left .name {
       font-size: 20px;
       font-size: 1.25rem;
@@ -2738,13 +2785,16 @@ h6 {
       .themes-item:first-child {
         padding: 0;
         display: block; }
-  .about-img:first-child {
+  .about-img:nth-child(1), .about-info {
     margin-bottom: 40px;
     margin-bottom: 2.5rem; }
   .call-action {
     text-align: center; }
     .call-action .text-content {
       display: inline; }
+  .section-feedback .feedback {
+    margin-bottom: 20px;
+    margin-bottom: 1.25rem; }
   .section-news .news {
     margin-bottom: 30px;
     margin-bottom: 1.875rem; }
@@ -2775,7 +2825,14 @@ h6 {
     justify-content: space-between; }
     .section-subscribe .form-subcribe .form-control {
       width: 315px;
-      width: 19.6875rem; } }
+      width: 19.6875rem;
+      margin-bottom: 10px;
+      margin-bottom: 0.625rem; }
+  .section-view-projects .sec-title {
+    margin-bottom: 10px;
+    margin-bottom: 0.625rem; }
+  .section-view-projects .view-title {
+    flex-wrap: wrap; } }
 
 .page-gui .menu-list {
   border-top: 1px solid #f0f0f0;

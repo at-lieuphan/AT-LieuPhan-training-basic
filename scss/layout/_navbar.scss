@@ -117,5 +117,21 @@
       @include pxRem(font-size, 22);
       @include pxRem(padding, 10 10);
     }
+    .menu-list {
+      @include pxRem(margin-bottom, 10);
+      border-right: none;
+      .menu-item {
+        @include pxRem(padding, 10 5);
+        background-color: map-get($colors, primary);
+        border-bottom: 1px solid map-get($colors, white);
+        &-link {
+          color: map-get($colors, white);
+        }
+        &:first-child {
+          border-left: none;
+        }
+        border-right: none;
+      }
+    }
   }
 }

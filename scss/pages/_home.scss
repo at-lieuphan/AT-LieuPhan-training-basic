@@ -267,6 +267,7 @@
       }
       .info-left {
         @include pxRem(margin-left, 20);
+        text-align: start;
         .name {
           @include pxRem(font-size, 20);
           @include pxRem(margin-bottom, 10);
@@ -470,7 +471,7 @@
     }
   }
   // Section-about
-  .about-img:first-child {
+  .about-img:nth-child(1), .about-info {
     @include pxRem(margin-bottom, 40);
   }
   // Call action 
@@ -482,7 +483,9 @@
   }
   // Customer feedback
   .section-feedback {
-
+    .feedback {
+      @include pxRem(margin-bottom, 20);
+    }
   }
   // Section news
   .section-news {
@@ -529,7 +532,16 @@
       justify-content: space-between;
       .form-control {
         @include pxRem(width, 315);
+        @include pxRem(margin-bottom, 10);
       }
+    }
+  }
+  .section-view-projects {
+    .sec-title {
+      @include pxRem(margin-bottom, 10);
+    }
+    .view-title {
+      flex-wrap: wrap;
     }
   }
 }

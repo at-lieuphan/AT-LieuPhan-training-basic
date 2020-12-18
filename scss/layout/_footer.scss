@@ -139,6 +139,9 @@
 }
 
 @include respond-below(large) {
+  .widget {
+    border-right: none;
+  }
   .contacts {
     .contact-item {
       @include pxRem(margin-bottom, 30);
@@ -175,5 +178,8 @@
     &:nth-child(2), &:nth-child(3) {
       @include pxRem(padding, 20);
     }
+  }
+  .coppy-right {
+    text-align: center;
   }
 }
