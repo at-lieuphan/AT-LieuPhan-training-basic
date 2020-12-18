@@ -433,8 +433,10 @@
   .section-subscribe {
     @include pxRem(padding, 45 0);
     .form-subcribe {
+      .form-control {
+        @include pxRem(width, 373);
+      }
       display: flex;
-      flex-wrap: wrap;
     }
   }
 }

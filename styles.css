@@ -2763,8 +2763,10 @@ h6 {
     padding: 45px 0px;
     padding: 2.8125rem 0rem; }
     .section-subscribe .form-subcribe {
-      display: flex;
-      flex-wrap: wrap; } }
+      display: flex; }
+      .section-subscribe .form-subcribe .form-control {
+        width: 373px;
+        width: 23.3125rem; } }
 
 @media (max-width: 1023px) {
   .section-services .services .service {
