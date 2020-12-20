@@ -114,3 +114,19 @@
     }
   }
 }
+
+@include respond-below(medium) {
+  .page-header {
+    .header-top {
+      .flex-between {
+        flex-wrap: wrap;
+      }
+      .top-left, .top-right {
+        margin: 0 auto;
+      }
+      .top-right {
+        @include pxRem(padding-bottom, 20);
+      }
+    }
+  }
+}

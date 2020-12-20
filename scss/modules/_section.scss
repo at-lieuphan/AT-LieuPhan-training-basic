@@ -26,3 +26,8 @@
     justify-content: center;
   }
 }
+@include respond-below(large)  {
+  .sec-title {
+    @include pxRem(font-size, 24);
+  }
+}

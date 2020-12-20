@@ -132,8 +132,10 @@
           <div class="slide-content">
             <h2 class="slide-title">Don't dreamed about success just work for it.</h2>
             <p class="slide-description">Triph business theme continues to grow every day thanks to the confidence.</p>
-            <a href="" class="btn btn-primary">Read More</a>
-            <a href="" class="btn btn-second">Contact Us</a>
+            <div class="buttons">
+              <a href="" class="btn btn-primary">Read More</a>
+              <a href="" class="btn btn-second">Contact Us</a>
+            </div>
           </div>
         </li>
         <li class="slide-item fade">
@@ -141,8 +143,10 @@
           <div class="slide-content">
             <h2 class="slide-title">Triph helps you to save time and money.</h2>
             <p class="slide-description">Triph business theme continues to grow every day thanks to the confidence.</p>
-            <a href="" class="btn btn-primary">Read More</a>
-            <a href="" class="btn btn-second">Contact Us</a>
+            <div class="buttons">
+              <a href="" class="btn btn-primary">Read More</a>
+              <a href="" class="btn btn-second">Contact Us</a>
+            </div>
           </div>
         </li>
         <li class="slide-item fade">
@@ -150,13 +154,15 @@
           <div class="slide-content">
             <h2 class="slide-title">Work with world class experts your next project</h2>
             <p class="slide-description">Triph business theme continues to grow every day thanks to the confidence.</p>
-            <a href="" class="btn btn-primary">Meet team</a>
-            <a href="" class="btn btn-second">Contact Us</a>
+            <div class="buttons">
+              <a href="" class="btn btn-primary">Read More</a>
+              <a href="" class="btn btn-second">Contact Us</a>
+            </div>
           </div>
         </li>
       </ul>
-      <button class="btn btn-action btn-next" onclick="plusDivs(-1)"><i class="fa fa-angle-left"></i></button>
-      <button class="btn btn-action btn-back" onclick="plusDivs(+1)"><i class="fa fa-angle-right"></i></button>
+      <button class="btn btn-action btn-next" onclick="plusSlides(-1)"><i class="fa fa-angle-left"></i></button>
+      <button class="btn btn-action btn-back" onclick="plusSlides(+1)"><i class="fa fa-angle-right"></i></button>
     </section>
     <!-- Service -->
     <section class="section-services">
@@ -226,30 +232,30 @@
       <div class="container">
         <ul class="service-counters row">
           <li class="counter-item col-large-3 col-medium-6 col-small-12">
-            <div class="icon-and-count">
-              <img src="./assets/images/sr.png" alt="count1  ">
-              <strong class="count">1472</strong>
+            <div class="icon-and-count example">
+              <img src="./assets/images/sr.png" alt="count1">
+              <strong class="timer count" id="earth" data-to="721" data-speed="1000" data-waypoint-active="yes"></strong>
             </div>
             <h4 class="name">Projects Completed</h4>
           </li>
           <li class="counter-item col-large-3 col-medium-6 col-small-12">
-            <div class="icon-and-count">
-              <img src="./assets/images/sr.png" alt="">
-              <strong class="count">285</strong>
+            <div class="icon-and-count example">
+              <img src="./assets/images/sr.png" alt="count1">
+              <strong class="timer count" id="earth" data-to="285" data-speed="1000" data-waypoint-active="yes"></strong>
             </div>
             <h4 class="name">Experienced Workers</h4>
           </li>
           <li class="counter-item col-large-3 col-medium-6 col-small-12">
-            <div class="icon-and-count">
-              <img src="./assets/images/sr.png" alt="">
-              <strong class="count">625</strong>
+            <div class="icon-and-count example">
+              <img src="./assets/images/sr.png" alt="count1">
+              <strong class="timer count" id="earth" data-to="625" data-speed="1000" data-waypoint-active="yes"></strong>
             </div>
             <h4 class="name">National Awards Won</h4>
           </li>
           <li class="counter-item col-large-3 col-medium-6 col-small-12">
-            <div class="icon-and-count">
+            <div class="icon-and-count example">
               <img src="./assets/images/sr.png" alt="">
-              <strong class="count">3962</strong>
+              <strong class="timer count" id="earth" data-to="3962" data-speed="1000" data-waypoint-active="yes"></strong>
             </div>
             <h4 class="name">Cups Of Coffee </h4>
           </li>
@@ -698,6 +704,9 @@
       </div>
     </div>
   </footer>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript" src="./js/jquery.countTo.js"></script>
+  <script type="text/javascript" src="js/jQuery_count.js"></script>
   <script type="text/javascript" src="./js/slide.js"></script>
   <script type="text/javascript" src="./js/gotoTop.js"></script>
   <script type="text/javascript" src="./js/dropdown.js"></script>

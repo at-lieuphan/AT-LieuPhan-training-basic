@@ -360,40 +360,44 @@
       }
     }
     .overlay-box, .bg-box {
-      display: none;
+      @include pxRem(right, 15);
+      @include pxRem(left, 15);
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      opacity: 0;
+      transition: all .4s ease;
+    }
+    .bg-box {
+      background-image: url('/assets/images/news-9.jpg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .overlay-box {
+      @include pxRem(padding, 15);
+      background-color: #030733af;
+      .title {
+        @include pxRem(font-size, 18);
+        @include pxRem(margin-bottom, 15);
+        @include pxRem(line-height, 24);
+        font-weight: 400;
+        a {
+          color: map-get($colors, primary);
+        }
+      }
+      .des {
+        @include pxRem(font-size, 16);
+        @include pxRem(margin-bottom, 25);
+        color: map-get($colors, white);
+      }
     }
     &:hover {
       .news-content {
         display: none;
       }
       .bg-box, .overlay-box {
-        @include pxRem(right, 15);
-        @include pxRem(left, 15);
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        display: block;
-      }
-      .bg-box {
-        background-image: url('/assets/images/news-9.jpg');
-      }
-      .overlay-box {
-        @include pxRem(padding, 15);
-        background-color: #030733af;
-        .title {
-          @include pxRem(font-size, 18);
-          @include pxRem(margin-bottom, 15);
-          @include pxRem(line-height, 24);
-          font-weight: 400;
-          a {
-            color: map-get($colors, primary);
-          }
-        }
-        .des {
-          @include pxRem(font-size, 16);
-          @include pxRem(margin-bottom, 25);
-          color: map-get($colors, white);
-        }
+        opacity: 1;
       }
     }
   }
@@ -505,6 +509,7 @@
   .section-business {
     text-align: center;
   }
+
   // Section-subscribe
   .section-subscribe {
     .wrapper-subscribe {
@@ -513,6 +518,7 @@
     }
     .form-subcribe {
       @include pxRem(margin-top, 30);
+      flex-wrap: wrap;
     }
   }
 }

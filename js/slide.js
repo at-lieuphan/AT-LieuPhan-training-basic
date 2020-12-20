@@ -1,6 +1,14 @@
 var slideIndex = 0;
 showSlides();
 
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
 function showSlides() {
   var i;
   var slides = document.getElementsByClassName('slide-item');
@@ -10,7 +18,7 @@ function showSlides() {
   slideIndex++;
   if (slideIndex > slides.length) {slideIndex = 1}    
   slides[slideIndex-1].style.display = 'block';
-  setTimeout(showSlides, 5000);
+  setTimeout(showSlides, 10000);
 }
 
 

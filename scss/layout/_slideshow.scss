@@ -1,6 +1,7 @@
 .section-slideshow {
   position: relative;
   z-index: 1;
+  overflow: hidden;
   .btn-action {
     display: none;
     position: absolute;
@@ -21,6 +22,7 @@
     .slide-item {
       position: relative;
       z-index: 100;
+      transform: scale(1.2);
       &:first-child {
         .slide-content {
           left: 50%;
@@ -33,50 +35,134 @@
       .slide-content {
         position: absolute;
         width: 46%;
-        top: 50%;
+        top: 0%;
         left: 10%;
         transform: translateY(-50%);
+        transform: rotate(30deg);
       }
     }
   }
 }
+
 .slide-content {
   .slide-title {
     @include pxRem(font-size, 48);
     @include pxRem(padding-bottom, 20);
     color: map-get($colors, white);
+    position: absolute;
     font-weight: 700;
     line-height: 1.2em;
+    opacity: 0;
   }
   .slide-description {
-    @include pxRem(font-size, 16);
+    @include pxRem(font-size, 22);
     @include pxRem(margin-bottom, 40);
+    @include pxRem(top, 200);
+    position: absolute;
     color: map-get($colors, white);
     font-weight: 400;
+    opacity: 0;
   }
-  .btn-second {
-    @include pxRem(margin-left, 15);
-    color: map-get($colors, white);
+  .buttons {
+    @include pxRem(top, 270);
+    position: absolute;
+    opacity: 0;
+    .btn-second {
+      @include pxRem(margin-left, 15);
+      color: map-get($colors, white);
+    }
   }
 }
 
 .fade {
   -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
+  -webkit-animation-duration: 3.5s;
   animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+  animation-duration: 3.5s;
+  animation-fill-mode: both;
 }
 
 @keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+  from {
+    opacity: .4;
+    transform: scale(1.2);
+    
+  } 
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
+.slide-content {
+  -webkit-animation-name: slide-content;
+  -webkit-animation-duration: 1.5s;
+  animation-name: slide-content;
+  animation-duration: 1.5s;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+}
+@keyframes slide-content {
+  to {
+    top: 20%;
+    transform: rotate(0deg);
+  }
+}
+
+.slide-title {
+  -webkit-animation-name: slide-title;
+  -webkit-animation-duration: 1.5s;
+  animation-name: slide-title;
+  animation-duration: 1.5s;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+}
+
+@keyframes slide-title {
+  0% {
+    top: 0%;
+    opacity: 0;
+  }
+  100% {
+    top: 30%;
+    opacity: 1;
+  }
+}
+.slide-description {
+  -webkit-animation-name: slide-description;
+  -webkit-animation-duration: 1.5s;
+  animation-name: slide-description;
+  animation-duration: 1.5s;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+  animation-delay: 3s;
+}
+@keyframes slide-description {
+  to {
+    @include pxRem(top, 170);
+    opacity: 1;
+  }
+}
+
+.buttons {
+  -webkit-animation-name: buttons;
+  -webkit-animation-duration: 1.5s;
+  animation-name: buttons;
+  animation-duration: 1.5s;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+  animation-delay: 4.5s;
+}
+@keyframes buttons {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+// Responsize
 @include respond-below(large) {
   .section-slideshow {
     .slide-list {
@@ -103,10 +189,30 @@
       @include pxRem(padding, 8 11);
       @include pxRem(font-size, 10);
     }
+    .buttons {
+      @include pxRem(top, 170);
+    }
   }
   .wrapper-sub-title {
     text-align: center;
   }
+  @keyframes slide-title {
+    0% {
+      top: 0%;
+      opacity: 0;
+    }
+    100% {
+      top: 40%;
+      opacity: 1;
+    }
+  }
+  @keyframes slide-description {
+    to {
+      @include pxRem(top, 100);
+      opacity: 1;
+    }
+  }
+
 }
 
 @include respond-below(medium) {
@@ -117,6 +223,7 @@
           @include pxRem(height, 246);
         }
         .slide-content {
+          top: 15%;
           .slide-title {
             @include pxRem(font-size, 20);
           }
@@ -128,6 +235,12 @@
           }
         }
       }
+    }
+  }
+  @keyframes slide-description {
+    to {
+      @include pxRem(top, 80);
+      opacity: 1;
     }
   }
 }
