@@ -60,23 +60,38 @@
   .drop-sub {
     position: relative;
     transition: width 4s;
-    .dropdown-content {
-      @include pxRem(width, 170);
+    .drop-sub-content {
       position: absolute;
       top: 0;
-      left: 100%;
-      opacity: 0;
-      transition: width 1s;
+      left: 50%;
+      // opacity: 0;
+      display: none;
     }
     &:hover {
       .dropdown-content {
-        width: 100%;
-        opacity: 1;
+        // width: 100%;
+        // opacity: 1;
+        display: block;
       }
     }
     a::after {
       display: none;
     }
+  }
+}
+.drop-sub-content {
+  -webkit-animation-name: drop-sub-content;
+  -webkit-animation-duration: .8s;
+  animation-name: drop-sub-content;
+  animation-duration: .8s;
+  animation-fill-mode: both;
+}
+@keyframes drop-sub-content {
+  from {
+    left: 90%;
+  } 
+  to {
+    left: 100%;
   }
 }
 
