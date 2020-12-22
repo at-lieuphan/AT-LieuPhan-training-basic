@@ -1,6 +1,5 @@
 .dropdown {
   position: relative;
-  transition: height 3s;
   z-index: 1000;
   & > a:after {
     @include pxRem(font-size, 14);
@@ -21,6 +20,7 @@
     position: absolute;
     background-color: map-get($colors, bg-green);
     opacity: 0;
+    transition: all .4s ease;
   }
   &:hover {
     .dropdown-content {
@@ -64,13 +64,10 @@
       position: absolute;
       top: 0;
       left: 50%;
-      // opacity: 0;
       display: none;
     }
     &:hover {
       .dropdown-content {
-        // width: 100%;
-        // opacity: 1;
         display: block;
       }
     }

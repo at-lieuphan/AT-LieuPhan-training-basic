@@ -499,13 +499,13 @@
       @include pxRem(margin-bottom, 30);
       &-content {
         .title {
-          @include pxRem(font-size, 22);
+          @include pxRem(font-size, 18);
           @include pxRem(line-height, 30);
         }
       }
     }
   }
-  // Section-business 
+  // Section-business
   .section-business {
     text-align: center;
   }

@@ -10,7 +10,10 @@
     transform: translateY(-50%);
   }
   .btn-back {
-    right: 0;
+    @include pxRem(right, 10);
+  }
+  .btn-next {
+    @include pxRem(left, 10);
   }
   &:hover {
     .btn-action {
@@ -25,7 +28,7 @@
       transform: scale(1.2);
       &:first-child {
         .slide-content {
-          left: 50%;
+          left: 43%;
         }
       }
       .slide-img {
@@ -34,7 +37,7 @@
       }
       .slide-content {
         position: absolute;
-        width: 46%;
+        width: 55%;
         top: 0%;
         left: 10%;
         transform: translateY(-50%);
@@ -67,26 +70,48 @@
     @include pxRem(top, 270);
     position: absolute;
     opacity: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
     .btn-second {
-      @include pxRem(margin-left, 15);
+      @include pxRem(margin-left, 180);
+      @include pxRem(top, -40);
+      position: absolute;
       color: map-get($colors, white);
+      opacity: 0;
+      animation: btn-sec-fade .5s ease both;
+      animation-delay: 5.5s;
+    }
+    .btn-primary {
+      @include pxRem(margin-left, -40);
+      animation: btn-pri-fade .5s ease both;
+      animation-delay: 5s;
+      opacity: 0;
     }
   }
 }
 
+@keyframes btn-pri-fade {
+  to {
+    opacity: 1;
+    margin-left: 0px;
+  }
+}
+@keyframes btn-sec-fade {
+  to {
+    @include pxRem(top, 0);
+    opacity: 1;
+  }
+}
+
 .fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 3.5s;
-  animation-name: fade;
-  animation-duration: 3.5s;
-  animation-fill-mode: both;
+  animation: fade 3.5s both;
 }
 
 @keyframes fade {
   from {
     opacity: .4;
     transform: scale(1.2);
-    
   } 
   to {
     opacity: 1;
@@ -95,13 +120,9 @@
 }
 
 .slide-content {
-  -webkit-animation-name: slide-content;
-  -webkit-animation-duration: 1.5s;
-  animation-name: slide-content;
-  animation-duration: 1.5s;
-  animation-timing-function: ease;
-  animation-fill-mode: both;
+  animation: slide-content .5s ease both;
 }
+
 @keyframes slide-content {
   to {
     top: 20%;
@@ -110,8 +131,6 @@
 }
 
 .slide-title {
-  -webkit-animation-name: slide-title;
-  -webkit-animation-duration: 1.5s;
   animation-name: slide-title;
   animation-duration: 1.5s;
   animation-timing-function: ease;
@@ -124,13 +143,11 @@
     opacity: 0;
   }
   100% {
-    top: 30%;
+    @include pxRem(top, 40);
     opacity: 1;
   }
 }
 .slide-description {
-  -webkit-animation-name: slide-description;
-  -webkit-animation-duration: 1.5s;
   animation-name: slide-description;
   animation-duration: 1.5s;
   animation-timing-function: ease;
@@ -145,8 +162,6 @@
 }
 
 .buttons {
-  -webkit-animation-name: buttons;
-  -webkit-animation-duration: 1.5s;
   animation-name: buttons;
   animation-duration: 1.5s;
   animation-timing-function: ease;
@@ -213,6 +228,16 @@
     }
   }
 
+}
+
+@include respond-below(large) {
+  .section-slideshow {
+    .buttons {
+      .btn-second {
+        @include pxRem(margin-left, 100);
+      }
+    }
+  }
 }
 
 @include respond-below(medium) {

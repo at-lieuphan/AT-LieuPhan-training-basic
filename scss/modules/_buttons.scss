@@ -46,7 +46,6 @@
   @extend %btn-pri-auto;
   color: map-get($colors, txt-bold);
   font-weight: 500;
-  letter-spacing: 1px;
   border: 2px solid map-get($colors, border-gray-light);
   &:hover {
     color: map-get($colors, white);
