@@ -1,0 +1,113 @@
+.dropdown {
+  position: relative;
+  z-index: 1000;
+  & > a:after {
+    @include pxRem(font-size, 14);
+    @include pxRem(margin-left, 8);
+    font-weight: 700;
+    font-family: 'FontAwesome';
+    content: "\f107";
+    color: map-get($colors, txt-black);
+  }
+  &:hover > a:after {
+    color: map-get($colors, primary);
+  }
+  .dropdown-content {
+    @include pxRem(padding, 10 0);
+    border-bottom: 2px solid map-get($colors, primary);
+    top: 103%;
+    left: 0%;
+    position: absolute;
+    background-color: map-get($colors, bg-green);
+    opacity: 0;
+    transition: all .4s ease;
+  }
+  &:hover {
+    .dropdown-content {
+      opacity: 1;
+      li {
+        @include pxRem(padding, 0 20);
+        @include pxRem(width, 230);
+        align-items: center;
+        & > a {
+          @include pxRem(padding, 15);
+          display: block;
+        }
+        & > a, & > a:after {
+          color: map-get($colors, white);
+          font-weight: 400;
+        }
+      }
+      li:hover {
+        position: relative;
+        background-color: map-get($colors, bg-green);
+        &::after {
+          @include pxRem(right, 30);
+          @include pxRem(font-size, 10);
+          position: absolute;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          content: "\003E";
+          color: map-get($colors, white);
+        }
+        & > a {
+          background-color: map-get($colors, primary);
+          color: map-get($colors, white);     
+        }
+      }
+    }
+  }
+  .drop-sub {
+    position: relative;
+    transition: width 4s;
+    .drop-sub-content {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      display: none;
+    }
+    &:hover {
+      .dropdown-content {
+        display: block;
+      }
+    }
+    a::after {
+      display: none;
+    }
+  }
+}
+.drop-sub-content {
+  -webkit-animation-name: drop-sub-content;
+  -webkit-animation-duration: .8s;
+  animation-name: drop-sub-content;
+  animation-duration: .8s;
+  animation-fill-mode: both;
+}
+@keyframes drop-sub-content {
+  from {
+    left: 90%;
+  } 
+  to {
+    left: 100%;
+  }
+}
+
+@include respond-below(medium) {
+  .dropdown {
+    & > a {
+      display: block;
+      &::after {
+        @include pxRem(right, 15);
+        @include pxRem(padding, 2 15);
+        position: absolute;
+        color: map-get($colors, white);
+        top: 50%;
+        transform: translateY(-50%);
+        border: 1px solid map-get($colors, white);
+      }
+    }
+    .dropdown-content {
+      display: none;
+    }
+  }
+}

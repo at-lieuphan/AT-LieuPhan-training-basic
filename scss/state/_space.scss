@@ -1,0 +1,48 @@
+$rootSize : 4;
+$sizeList : 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 , 14, 15;
+
+@each $size in $sizeList {
+  $value: $rootSize * $size;
+  .padding-#{$size} {
+    @include pxRem(padding, $value);
+  }
+  .pd-l-#{$size} {
+    @include pxRem(padding-left, $value);
+  }
+  .pd-r-#{$size} {
+    @include pxRem(padding-right, $value);
+  }
+  .pd-t-#{$size} {
+    @include pxRem(padding-top, $value);
+  }
+  .pd-b-#{$size} {
+    @include pxRem(padding-bottom, $value);
+  }
+  .pd-y-#{$size} {
+    @include pxRem(padding, $value 0);
+  }
+  .pd-x-#{$size} {
+    @include pxRem(padding, 0 $value);
+  }
+  .margin-#{$size} {
+    @include pxRem(margin, $value);
+  }
+  .mg-t-#{$size} {
+    @include pxRem(margin-top, $value !important);
+  }
+  .mg-l-#{$size} {
+    @include pxRem(margin-left, $value);
+  }
+  .mg-b-#{$size} {
+    @include pxRem(margin-bottom, $value);
+  }
+  .mg-r-#{$size} {
+    @include pxRem(margin-right, $value);
+  }
+  .mg-y-#{$size} {
+    @include pxRem(margin, $value 0);
+  }
+  .mg-x-#{$size} {
+    @include pxRem(margin, 0 $value);
+  }
+}

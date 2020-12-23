@@ -1,0 +1,6 @@
+.page-gui {
+  .menu-list {
+    border-top: 1px solid map-get($colors, border-gray-light);
+    border-bottom: 1px solid map-get($colors, border-gray-light);
+  }
+}

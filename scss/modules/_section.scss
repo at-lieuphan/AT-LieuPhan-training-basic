@@ -1,0 +1,33 @@
+.sec-title {
+  @include pxRem(font-size, 32);
+  color: map-get($colors, txt-bold);
+  font-weight: 400;
+  text-align: center;
+  &:after {
+    @include pxRem(width, 130);
+    @include pxRem(height, 20);
+    content: "";
+    top: 100%;
+    display: block;
+    margin: 0 auto;
+    background-image: url("/assets/images/bor-title.png");
+  }
+}
+.sub-title {
+  @include pxRem(font-size, 18);
+  @include pxRem(margin-top, 10);
+  color: map-get($colors, txt-gray3);
+  font-weight: 300;
+}
+
+@include respond-below(large) {
+  .sub-title {
+    display: inline;
+    justify-content: center;
+  }
+}
+@include respond-below(large)  {
+  .sec-title {
+    @include pxRem(font-size, 24);
+  }
+}

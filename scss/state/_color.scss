@@ -1,0 +1,21 @@
+.bg-primary {
+  background-color: map-get($colors, primary);
+}
+.bg-white {
+  background-color: map-get($colors, white);
+}
+.bg-gray {
+  background-color: map-get($colors, bg-gray);
+}
+.bg-green {
+  background-color: map-get($colors, bg-green);
+}
+.color-pri {
+  color: map-get($colors, primary);
+}
+.color-white {
+  color: map-get($colors, white);
+}
+.color-black {
+  color: map-get($colors, black);
+}

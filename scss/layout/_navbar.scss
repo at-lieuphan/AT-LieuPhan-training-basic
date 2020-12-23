@@ -1,0 +1,137 @@
+.menu-list {
+  .menu-item {
+    @include pxRem(padding, 20 25);
+    border-right: 1px solid map-get($colors, border-gray1);
+    &:first-child {
+      border-left: 1px solid map-get($colors, border-gray1);
+    }
+    &-link {
+      position: relative;
+      @include pxRem(font-size, 14);
+      @include pxRem(line-height, 30);
+      color: map-get($colors, txt-black);
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    &:hover {
+      .menu-item-link {
+        color: map-get($colors, primary);
+      }
+      .menu-item-link::before {
+        @include pxRem(width, 25);
+        @include pxRem(bottom, -5);
+        content: "";
+        position: absolute;
+        left: 20%;
+        border: 1px solid map-get($colors, primary);
+      }
+    }
+    .active {
+      color: map-get($colors, primary);
+      &:before {
+        @include pxRem(width, 25);
+        @include pxRem(bottom, -5);
+        content: "";
+        position: absolute;
+        left: 20%;
+        border: 1px solid map-get($colors, primary);
+      }
+    }
+  }
+}
+.outer-box {
+  .search-box {
+    @include pxRem(padding-right, 20);
+    display: flex;
+    align-items: center;
+    position: relative;
+    .form-search {
+      @include pxRem(padding, 20);
+      background-color: map-get($colors, white);
+      position: absolute;
+      z-index: 10;
+      top: 100%;
+      right: 0;
+      border: 2px solid map-get($colors, primary);
+      .form-control {
+        @include pxRem(width, 250);
+        @include pxRem(height, 40);
+        @include pxRem(padding, 10 25 10 10);
+      }
+      .btn-search {
+        @include pxRem(right, 30);
+        position: absolute;
+        top: 40%;
+      }
+    }
+    .btn-search {
+      i {
+        @include pxRem(font-size, 16);
+      }
+    }
+  }
+  .wrapper-button {
+    @include pxRem(padding, 30);
+    border-right: 1px solid map-get($colors, border-gray1);
+    border-left: 1px solid map-get($colors, border-gray1);
+  }
+}
+.collapse {
+  display: none;
+}
+.collapse.show {
+  display: block;
+}
+.nav-sp {
+  display: none;
+}
+@include respond-below(large) {
+  .menu-list {
+    width: 100%;
+    border-right: 1px solid map-get($colors, border-gray-light);
+  }
+  .outer-box {
+    display: none;
+  }
+}
+
+@include respond-below(medium) {
+  .nav-pc {
+    .menu-list, .outer-box {
+      display: none;
+    }
+  }
+  .nav-sp {
+    @include pxRem(padding, 20 15);
+    display: flex;
+    width: 100%;
+  }
+  .page-header .header-navbar {
+    display: flex;
+    flex-direction: column-reverse;
+    .nav-pc {
+      justify-content: flex-start;
+      width: 100%;
+    }
+    .btn-nav {
+      @include pxRem(font-size, 22);
+      @include pxRem(padding, 10 10);
+    }
+    .menu-list {
+      @include pxRem(margin-bottom, 10);
+      border-right: none;
+      .menu-item {
+        @include pxRem(padding, 10 5);
+        background-color: map-get($colors, primary);
+        border-bottom: 1px solid map-get($colors, white);
+        &-link {
+          color: map-get($colors, white);
+        }
+        &:first-child {
+          border-left: none;
+        }
+        border-right: none;
+      }
+    }
+  }
+}
