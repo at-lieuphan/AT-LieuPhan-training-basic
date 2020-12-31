@@ -2495,6 +2495,7 @@ h6 {
     margin-top: 20px;
     margin-top: 1.25rem; }
     .section-services .services .service {
+      transition: all 3s ease;
       transition-delay: 2s; }
     .section-services .services .overlay-box {
       position: relative; }
@@ -2515,7 +2516,8 @@ h6 {
           justify-content: center;
           align-items: center;
           background-color: #131d33;
-          transform: rotate(45deg); }
+          transform: rotate(45deg);
+          transition: all 700ms ease; }
         .section-services .services .overlay-box .overlay-inner i {
           font-size: 40px;
           font-size: 2.5rem;
@@ -2526,8 +2528,8 @@ h6 {
         height: 18.75rem;
         width: 100%; }
     .section-services .services .wrapper-txt {
-      padding: 0px 20px;
-      padding: 0rem 1.25rem;
+      padding: 0px 40px;
+      padding: 0rem 2.5rem;
       font-size: 16px;
       font-size: 1rem;
       position: absolute;
@@ -2540,50 +2542,55 @@ h6 {
       width: 100%;
       opacity: 0;
       transition: all .7s ease; }
-    .section-services .services .service:hover .overlay-inner .bg-icon {
-      display: none; }
-    .section-services .services .service:hover .wrapper-txt {
-      opacity: 1; }
-      .section-services .services .service:hover .wrapper-txt .text {
+      .section-services .services .wrapper-txt .text {
+        padding: 0px 20px;
+        padding: 0rem 1.25rem;
         color: #fff;
         position: absolute;
         width: 100%;
         top: 50%;
         right: 50%;
         transform: translate(50%, -50%); }
+    .section-services .services .service:hover .overlay-inner .bg-icon {
+      background-color: initial; }
+      .section-services .services .service:hover .overlay-inner .bg-icon i {
+        color: transparent; }
+    .section-services .services .service:hover .wrapper-txt {
+      opacity: 1; }
 
-.service .lower-box {
-  padding: 20px 10px;
-  padding: 1.25rem 0.625rem;
-  display: flex;
-  justify-content: center;
-  border: 1px solid #f0f0f0; }
-  .service .lower-box .title {
-    font-size: 20px;
-    font-size: 1.25rem;
-    color: #222222;
-    font-weight: 400; }
-
-.service:hover .lower-box {
-  position: relative;
-  align-items: center;
-  justify-content: flex-start; }
-  .service:hover .lower-box a {
-    width: 30px;
-    width: 1.875rem;
-    height: 30px;
-    height: 1.875rem;
-    font-size: 15px;
-    font-size: 0.9375rem;
-    right: 10px;
-    right: 0.625rem;
-    position: absolute;
-    color: #fff;
+.service {
+  transition: all .4s ease; }
+  .service .lower-box {
+    padding: 20px 10px;
+    padding: 1.25rem 0.625rem;
     display: flex;
-    align-items: center;
     justify-content: center;
-    background-color: #fa9928;
-    border-radius: 50%; }
+    border: 1px solid #f0f0f0; }
+    .service .lower-box .title {
+      font-size: 20px;
+      font-size: 1.25rem;
+      color: #222222;
+      font-weight: 400; }
+  .service:hover .lower-box {
+    position: relative;
+    align-items: center;
+    justify-content: flex-start; }
+    .service:hover .lower-box a {
+      width: 30px;
+      width: 1.875rem;
+      height: 30px;
+      height: 1.875rem;
+      font-size: 15px;
+      font-size: 0.9375rem;
+      right: 10px;
+      right: 0.625rem;
+      position: absolute;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #fa9928;
+      border-radius: 50%; }
 
 .section-service-counter {
   margin-top: -50px;

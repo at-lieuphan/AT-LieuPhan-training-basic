@@ -9,7 +9,7 @@
   .services {
     @include pxRem(margin-top, 20);
     .service {
-      // transition: all 3s ease;
+      transition: all 3s ease;
       transition-delay: 2s;
     }
     .overlay-box {
@@ -28,6 +28,7 @@
           align-items: center;
           background-color: map-get($colors, bg-green);
           transform: rotate(45deg);
+          transition: all 700ms ease;
         }
         i {
           @include pxRem(font-size, 40);
@@ -41,7 +42,7 @@
       }
     }
     .wrapper-txt {
-      @include pxRem(padding, 0 20);
+      @include pxRem(padding, 0 40);
       @include pxRem(font-size, 16);
       position: absolute;
       background: rgba(19,29,51,0.90);
@@ -53,29 +54,34 @@
       width: 100%;
       opacity: 0;
       transition: all .7s ease;
+      .text {
+        @include pxRem(padding, 0 20);
+        color: map-get($colors, white);
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+      }
     }
     .service:hover {
       .overlay-inner {
         .bg-icon {
-          display: none;
+          background-color: initial;
+          i {
+            color: transparent;
+          }
         }
       }
       .wrapper-txt {
         opacity: 1;
-        .text {
-          color: map-get($colors, white);
-          position: absolute;
-          width: 100%;
-          top: 50%;
-          right: 50%;
-          transform: translate(50%, -50%);
-        }
       }
     }
   }
 }
 
 .service {
+  transition: all .4s ease;
   .lower-box {
     @include pxRem(padding, 20 10);
     display: flex;
