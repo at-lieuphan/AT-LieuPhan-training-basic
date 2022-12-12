@@ -1,0 +1,48 @@
+.projects {
+  .project {
+    @include pxRem(margin-bottom, 30);
+    position: relative;
+    &-content {
+      display: none;
+    }
+    &-img {
+      width: 100%;
+    }
+    .project-wrapper {
+      @include pxRem(margin, 0 15);
+      transition: all .7s ease;
+      opacity: 0;
+      position: absolute;
+      background: rgba(19,29,51,0.90);
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 2;
+      .project-content {
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        width: 100%;
+        display: block;
+        text-align: center;
+        transform: translate(50%, -50%);
+        .img-title {
+          @include pxRem(margin-bottom, 15);
+          a {
+            color: map-get($colors, white);
+          }
+        }
+        .designation {
+          @include pxRem(font-size, 16);
+          color: map-get($colors, primary);
+        }
+      }
+    }
+    &:hover {
+      .project-wrapper {
+        opacity: 1;
+      }
+    }
+  }
+}

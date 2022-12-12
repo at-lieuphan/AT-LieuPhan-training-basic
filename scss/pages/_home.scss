@@ -1,0 +1,561 @@
+.page-main {
+  .text-left:after {
+    margin: 0;
+  }
+}
+// service
+.section-services {
+  @include pxRem(padding, 75 0 130);
+  .services {
+    @include pxRem(margin-top, 20);
+    .service {
+      transition: all 3s ease;
+      transition-delay: 2s;
+    }
+    .overlay-box {
+      position: relative;
+      .overlay-inner {
+        position: relative;
+        overflow: hidden;
+        .bg-icon {
+          @include pxRem(top, -8);
+          @include pxRem(right, -51);
+          @include pxRem(width, 150);
+          @include pxRem(height, 70);
+          display: flex;
+          position: absolute;
+          justify-content: center;
+          align-items: center;
+          background-color: map-get($colors, bg-green);
+          transform: rotate(45deg);
+          transition: all 700ms ease;
+        }
+        i {
+          @include pxRem(font-size, 40);
+          color: map-get($colors, white);
+          transform: rotate(-45deg);
+        }
+      }
+      .service-img {
+        @include pxRem(height, 300);
+        width: 100%;
+      }
+    }
+    .wrapper-txt {
+      @include pxRem(padding, 0 40);
+      @include pxRem(font-size, 16);
+      position: absolute;
+      background: rgba(19,29,51,0.90);
+      z-index: 1500;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      text-align: center;
+      width: 100%;
+      opacity: 0;
+      transition: all .7s ease;
+      .text {
+        @include pxRem(padding, 0 20);
+        color: map-get($colors, white);
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+      }
+    }
+    .service:hover {
+      .overlay-inner {
+        .bg-icon {
+          background-color: initial;
+          i {
+            color: transparent;
+          }
+        }
+      }
+      .wrapper-txt {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.service {
+  transition: all .4s ease;
+  .lower-box {
+    @include pxRem(padding, 20 10);
+    display: flex;
+    justify-content: center;
+    border: 1px solid map-get($colors, border-gray-light);
+    .title {
+      @include pxRem(font-size, 20);
+      color: map-get($colors, txt-bold);
+      font-weight: 400;
+    }
+  }
+  &:hover {
+    .lower-box {
+      position: relative;
+      align-items: center;
+      justify-content: flex-start;
+      a {
+        @include pxRem(width, 30);
+        @include pxRem(height, 30);
+        @include pxRem(font-size, 15);
+        @include pxRem(right, 10);
+        position: absolute;
+        color: map-get($colors, white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: map-get($colors, primary);
+        border-radius: 50%;
+      }
+    }
+  }
+}
+// counter
+.section-service-counter {
+  @include pxRem(margin-top, -50);
+  @include pxRem(margin-bottom, -70);
+}
+.service-counters {
+  border: 1px solid map-get($colors, border-gray-light);
+  .counter-item {
+    @include pxRem(padding, 30);
+    background-color: map-get($colors, white);
+    text-align: center;
+    border-right: 1px solid map-get($colors, border-gray-light);
+    &:last-child {
+      border-right: none;
+    }
+    img {
+      @include pxRem(width, 46);
+      @include pxRem(height, 36);
+    }
+    .count {
+      @include pxRem(font-size, 36);
+      font-weight: 400;
+      color: map-get($colors, txt-black);
+    }
+    .name {
+      @include pxRem(font-size, 18);
+      @include pxRem(margin-top, 10);
+      color: map-get($colors, primary);
+      font-weight: 400;
+    }
+  }
+}
+// Choose us
+.section-choose {
+  @include pxRem(padding, 100 0 70);
+  background-color: map-get($colors, bg-green);
+  .sec-title {
+    @include pxRem(margin-bottom, 20);
+    color: map-get($colors, white);
+  }
+  .sub-title {
+    @include pxRem(font-size, 16);
+    @include pxRem(margin-bottom, 15);
+    color: map-get($colors, txt-gray4);
+    line-height: 1.7em;
+  }
+  .btn-action {
+    border: 1px solid map-get($colors, txt-gray4);
+    background-color: inherit;
+    &:hover {
+      border: 1px solid map-get($colors, primary);
+      color: map-get($colors, primary);
+    }
+  }
+}
+.themes {
+  @include pxRem(margin-left, 20);
+  color: map-get($colors, white);
+  &-item {
+    &:hover {
+      i {
+        color: map-get($colors, primary);
+      }
+    }
+  }
+  .wrapper-themes {
+    @include pxRem(padding, 10);
+      border: 1px solid rgba(255,255,255,0.10);
+      text-align: center;
+    i {
+      @include pxRem(font-size, 80);
+    }
+    .themes-content {
+      @include pxRem(margin-top, 10);
+      @include pxRem(padding, 20);
+      background-color: rgba(255,255,255,0.05);
+      .themes-name {
+        @include pxRem(font-size, 20);
+        @include pxRem(padding, 20);
+        font-weight: 400;
+      }
+      .themes-description {
+        @include pxRem(font-size, 16);
+        font-weight: 300;
+        color: map-get($colors, txt-gray4);
+      }
+    }
+  }
+}
+// About us 
+.section-about {
+  @include pxRem(padding, 80 0 50);
+  .sec-title {
+    @include pxRem(margin-bottom, 50);
+  }
+  .about-title {
+    @include pxRem(font-size, 18);
+    color: map-get($colors, primary);
+    @include pxRem(margin-bottom, 22);
+    font-weight: 500;
+    font-style: italic;
+    line-height: 1.5em;
+  }
+  .about-des {
+    @include pxRem(font-size, 16);
+    @include pxRem(margin-bottom, 30);
+    color: map-get($colors, txt-gray4);
+    font-weight: 300;
+    line-height: 1.8em;
+  }
+}
+// Call action
+.call-action {
+  @include pxRem(padding, 65 0);
+  .text-content {
+    @include pxRem(font-size, 24);
+    color: map-get($colors, white);
+    text-align: center;
+    font-weight: 400;
+  }
+}
+// View projects 
+.section-view-projects {
+  @include pxRem(padding, 80 0 50);
+  .view-title {
+    @include pxRem(margin-bottom, 40);
+  }
+}
+// New Subscribe
+.section-subscribe {
+  @include pxRem(padding, 45 50);
+  .sec-title {
+    text-align: left;
+    &::after {
+      display: none;
+    }
+  }
+  .form-control {
+    @include pxRem(width, 475);
+    @include pxRem(margin-right, 20);
+  }
+}
+// section-customer
+.section-feedback {
+  @include pxRem(padding, 75 0);
+  .sec-title {
+    @include pxRem(margin-bottom, 40);
+  }
+}
+.feedbacks {
+  .feedback {
+    &-info {
+      @include pxRem(padding, 25);
+      align-items: flex-start;
+      .avatar {
+        border-radius: 50%;
+      }
+      .info-left {
+        @include pxRem(margin-left, 20);
+        text-align: start;
+        .name {
+          @include pxRem(font-size, 20);
+          @include pxRem(margin-bottom, 10);
+          color: map-get($colors, txt-bold);
+          font-weight: 400;
+        }
+        .location {
+          @include pxRem(font-size, 16);
+          color: map-get($colors, primary);
+        }
+      }
+      .info-right {
+        @include pxRem(font-size, 16);
+        @include pxRem(margin-bottom, 10);
+        font-weight: 200;
+        color: map-get($colors, txt-gray2);
+        i {
+          @include pxRem(font-size, 60);
+          @include pxRem(margin-top, 15);
+          color: map-get($colors, border-gray-light);
+        }
+      }
+    }
+    .lower-box {
+      @include pxRem(padding, 0 20 40 20);
+      position: relative;
+      .feedback-text {
+        @include pxRem(padding-top, 20);
+        @include pxRem(font-size, 16);
+        @include pxRem(line-height, 28);
+        border-top: 1px solid map-get($colors, border-gray-light);
+        color: map-get($colors, txt-gray3);
+        font-weight: 200;
+        &::after {
+          position: absolute;
+          content: '';
+          right: 0;
+          bottom: 0;
+          border-bottom: 35px solid #f7f7f7;
+          border-left: 35px solid transparent;
+        }
+        &::before {
+          position: absolute;
+          content: '';
+          right: 0;
+          bottom: 0;
+          border-top: 35px solid map-get($colors, border-gray);
+          border-right: 35px solid transparent;
+        }
+      }
+    }
+  }
+}
+
+.section-news {
+  @include pxRem(padding, 75 0);
+  .btn-second {
+    border: 2px solid rgba(255,255,255,0.10);
+  }
+  .news {
+    position: relative;
+    &-content {
+      @include pxRem(padding, 20);
+      background-color: map-get($colors, white);
+      .date {
+        @include pxRem(font-size, 16);
+        color: map-get($colors, primary);
+        font-weight: 300;
+        line-height: 1.2;
+      }
+      .title {
+        @include pxRem(font-size, 18);
+        @include pxRem(line-height, 25);
+        @include pxRem(padding-bottom, 20);
+        @include pxRem(margin, 10 0 20);
+        color: map-get($colors, txt-bold);
+        font-weight: 400;
+        border-bottom: 1px solid #f0f0f0;
+      }
+      .list {
+        li {
+          @include pxRem(padding, 7 0);
+          color: map-get($colors, txt-gray3);
+          font-size: 14px;
+          i {
+            @include pxRem(margin-right, 10);
+            color: map-get($colors, primary);
+          }
+        }
+      }
+    }
+    .overlay-box, .bg-box {
+      @include pxRem(right, 15);
+      @include pxRem(left, 15);
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      opacity: 0;
+      transition: all .4s ease;
+    }
+    .bg-box {
+      background-image: url('/assets/images/news-9.jpg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .overlay-box {
+      @include pxRem(padding, 15);
+      background-color: #030733af;
+      .title {
+        @include pxRem(font-size, 18);
+        @include pxRem(margin-bottom, 15);
+        @include pxRem(line-height, 24);
+        font-weight: 400;
+        a {
+          color: map-get($colors, primary);
+        }
+      }
+      .des {
+        @include pxRem(font-size, 16);
+        @include pxRem(margin-bottom, 25);
+        color: map-get($colors, white);
+      }
+    }
+    &:hover {
+      .news-content {
+        display: none;
+      }
+      .bg-box, .overlay-box {
+        opacity: 1;
+      }
+    }
+  }
+}
+// Business
+.section-business {
+  @include pxRem(padding, 70 0 80);
+  .sec-title {
+    @include pxRem(margin-bottom, 20);
+    &::after {
+      display: none;
+    }
+  }
+  .business-list {
+    @include pxRem(margin-top, 30);
+    text-align: center;
+    .business-item {
+      @include pxRem(padding, 15);
+      .business-wrapper {
+        @include pxRem(padding, 15);
+        border: 1px solid map-get($colors, border-gray-light);
+        .business-des {
+          @include pxRem(font-size, 16);
+          @include pxRem(line-height, 28);
+          @include pxRem(margin, 25 0);
+          color: map-get($colors, txt-gray3);
+          font-weight: 200;
+        }
+      }
+    }
+  }
+}
+
+
+// responsize
+@include respond-below(largest) {
+  .section-subscribe {
+    @include pxRem(padding, 45 0);
+    .form-subcribe {
+      .form-control {
+        @include pxRem(width, 373);
+      }
+      display: flex;
+    }
+  }
+}
+
+@include respond-below(large) {
+  .section-services {
+    .services {
+      .service {
+        @include pxRem(margin-bottom, 30);
+      }
+    }
+  }
+  .service-counters {
+    margin: 0;
+  }
+  // .section-choose
+  .section-choose {
+    .wrapper-choose {
+      flex-direction: column;
+    }
+    .title-choose {
+      flex-direction: column;
+    }
+  }
+  .themes {
+    @include pxRem(padding-top, 20);
+    margin: 0;
+    &-item {
+      display: none;
+      &:first-child {
+        padding: 0;
+        display: block;
+      }
+    }
+  }
+  // Section-about
+  .about-img:nth-child(1), .about-info {
+    @include pxRem(margin-bottom, 40);
+  }
+  // Call action 
+  .call-action {
+    text-align: center;
+    .text-content {
+      display: inline;
+    }
+  }
+  // Customer feedback
+  .section-feedback {
+    .feedback {
+      @include pxRem(margin-bottom, 20);
+    }
+  }
+  // Section news
+  .section-news {
+    .news {
+      @include pxRem(margin-bottom, 30);
+      &-content {
+        .title {
+          @include pxRem(font-size, 18);
+          @include pxRem(line-height, 30);
+        }
+      }
+    }
+  }
+  // Section-business
+  .section-business {
+    text-align: center;
+  }
+
+  // Section-subscribe
+  .section-subscribe {
+    .wrapper-subscribe {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .form-subcribe {
+      @include pxRem(margin-top, 30);
+      flex-wrap: wrap;
+    }
+  }
+}
+
+@include respond-below(medium) {
+  .themes-item:first-child {
+    width: 100%;
+  }
+  .section-business {
+    .sec-title {
+      @include pxRem(font-size, 24);
+    }
+    .sub-title {
+      @include pxRem(font-size, 14);
+    }
+  }
+  .section-subscribe {
+    .form-subcribe {
+      justify-content: space-between;
+      .form-control {
+        @include pxRem(width, 315);
+        @include pxRem(margin-bottom, 10);
+      }
+    }
+  }
+  .section-view-projects {
+    .sec-title {
+      @include pxRem(margin-bottom, 10);
+    }
+    .view-title {
+      flex-wrap: wrap;
+    }
+  }
+}

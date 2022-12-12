@@ -1,0 +1,64 @@
+// === Font === //
+$font-body: 'Conv_roboto', 'Open Sans', sans-serif;
+
+// === Font Weight === //
+$font-weight: (
+  normal: 400,
+  medium: 600,
+  bold: 700
+);
+
+// == Breakpoints === //
+$breakpoints: (
+  small: 320px,
+  medium: 768px,
+  wide: 960px,
+  large: 1024px,
+  largest: 1280px
+);
+
+// === Colors === //
+$colors: (
+  primary: #fa9928,
+  white: #fff,
+  black: #111,
+  txt-black: #333,
+  txt-black2: #1e260d,
+  txt-gray: #939394,
+  border-black: #333,
+  border-gray: #e4e4e4,
+  border-gray1: #ededed,
+  border-gray-light: #f0f0f0,
+  bg-gray: #f7f7f7,
+  bg-green: #131d33,
+  txt-gray2: #b9b9b9,
+  txt-gray3: #848484,
+  txt-gray4: #a8a8a8,
+  txt-gray5: #9c9c9c,
+  txt-bold: #222222
+);
+
+// === z-index === //
+$zindexs: (
+  dropdown: 1000,
+  sticky: 1020,
+  fixed: 1030,
+  modal-backdrop: 1040,
+  modal: 1050,
+  popover: 1060,
+  tooltip: 1070
+);
+
+// === Typography === //
+$font-size-base: 0.875rem !default; // 14px
+$font-size-lg: $font-size-base * 1.25 !default;
+$font-size-sm: $font-size-base * .875 !default;
+
+$h-font-size: (
+  h1: $font-size-base * 2.5,
+  h2: $font-size-base * 2,
+  h3: $font-size-base * 1.75,
+  h4: $font-size-base * 1.5,
+  h5: $font-size-base * 1.25,
+  h6: $font-size-base
+);
